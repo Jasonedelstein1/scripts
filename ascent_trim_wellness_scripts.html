@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent Trim & Wellness: Video Production Scripts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --primary-bg: #f8f3de;
+            --secondary-bg: #0a0a0d;
+            --primary: #1a6aff;
+            --secondary: #fc5130;
+            --primary-bg-alpha: rgba(248, 243, 222, 0.9);
+            --secondary-bg-alpha: rgba(10, 10, 13, 0.1);
+            --shadow-light: rgba(10, 10, 13, 0.1);
+            --shadow-medium: rgba(10, 10, 13, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--secondary-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: var(--primary-bg);
+            border-bottom: 1px solid rgba(10, 10, 13, 0.15);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px var(--shadow-light);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .company-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--secondary-bg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--secondary-bg);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--secondary-bg);
+            transition: all 0.3s ease;
+        }
+
+        .main-content {
+            width: 100%;
+            background-color: var(--primary-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(135deg, rgba(10, 10, 13, 0.1), rgba(10, 10, 13, 0.05));
+            margin: 40px 0;
+        }
+
+        .heading_h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 1000;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .heading_h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .heading_h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .heading_h4 {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .body-text {
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: var(--secondary-bg);
+        }
+
+        .ui-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--secondary-bg);
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .tag.is-accent-primary {
+            background-color: var(--primary);
+            color: var(--primary-bg);
+            border: 2px solid var(--primary);
+        }
+
+        .tag.secondary {
+            background-color: var(--secondary);
+            color: var(--primary-bg);
+            border: 2px solid var(--secondary);
+        }
+
+        .script-card {
+            background: var(--primary-bg);
+            border: 1px solid rgba(10, 10, 13, 0.15);
+            border-radius: 6px;
+            box-shadow: 0 2px 8px var(--shadow-light);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .script-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(10, 10, 13, 0.1);
+        }
+
+        .meta-item {
+            font-size: 0.95rem;
+        }
+
+        .meta-label {
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        .scene-card {
+            background: rgba(10, 10, 13, 0.03);
+            border: 1px solid rgba(10, 10, 13, 0.1);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .scene-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .scene-number {
+            background-color: var(--primary);
+            color: var(--primary-bg);
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .scene-location {
+            font-weight: 700;
+            color: var(--secondary-bg);
+            font-size: 1.05rem;
+        }
+
+        .scene-content {
+            margin-top: 12px;
+        }
+
+        .scene-section {
+            margin-bottom: 15px;
+        }
+
+        .scene-section-title {
+            font-weight: 800;
+            color: var(--secondary);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .scene-section-content {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding-left: 15px;
+        }
+
+        .dialogue {
+            font-style: italic;
+            padding: 10px 15px;
+            background: rgba(10, 10, 13, 0.05);
+            border-left: 3px solid var(--primary);
+            margin: 8px 0;
+        }
+
+        .note {
+            background: rgba(252, 81, 48, 0.1);
+            border-left: 3px solid var(--secondary);
+            padding: 10px 15px;
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .hero-content {
+            margin-bottom: 30px;
+        }
+
+        .document-info {
+            background: rgba(10, 10, 13, 0.05);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            font-size: 0.95rem;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-bg);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 12px var(--shadow-medium);
+                border-top: 1px solid rgba(10, 10, 13, 0.15);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .section {
+                padding: 25px 0;
+            }
+
+            .script-card {
+                padding: 20px;
+            }
+
+            .scene-card {
+                padding: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#1a6aff"/>
+                    <path d="M30 40 Q50 20, 70 40 T70 60 Q50 80, 30 60 T30 40" fill="#fc5130"/>
+                </svg>
+                <span class="company-name">The Salt Lick Denver</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#script1">Manitou Incline</a></li>
+                <li><a href="#script2">Personal Story</a></li>
+                <li><a href="#script3">Educational</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container">
+            <section class="section" id="overview">
+                <div class="hero-content">
+                    <h1 class="heading_h1">Ascent Trim & Wellness</h1>
+                    <h2 class="heading_h2" style="color: var(--secondary); margin-top: 5px;">Video Production Scripts</h2>
+                    <p class="body-text">
+                        Production documentation for <span class="highlight">three essential video advertisements</span> featuring Don's authentic weight loss journey and expertise. Each script is designed to resonate with prospective patients through storytelling, education, and genuine connection.
+                    </p>
+                </div>
+
+                <div class="document-info">
+                    <h3 class="heading_h4" style="margin-bottom: 15px;">Document Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="meta-label">Client:</span> Ascent Trim & Wellness
+                        </div>
+                        <div class="info-item">
+                            <span class="meta-label">Subject:</span> Don (Owner/Founder)
+                        </div>
+                        <div class="info-item">
+                            <span class="meta-label">Production Date:</span> TBD
+                        </div>
+                        <div class="info-item">
+                            <span class="meta-label">Document Version:</span> 1.0
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section" id="script1">
+                <h2 class="heading_h2">Script 1: Manitou Incline</h2>
+                
+                <div class="script-card">
+                    <div class="script-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Concept:</span> Visual metaphor using weighted backpack to represent the burden of obesity
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Estimated Runtime:</span> 60-90 seconds
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Primary Message:</span> Weight loss isn't about willpower—it's about getting help to start your journey
+                        </div>
+                    </div>
+
+                    <h3 class="heading_h3">Scene Breakdown</h3>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 1</span>
+                            <span class="scene-location">INTERIOR: Home</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don speaking directly to camera</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "In 1998 I was 400lbs, and today I'm going back."
+                                </div>
+                                <div class="dialogue">
+                                    "I've filled this backpack with the heaviest objects I could find in my house, and we're gonna climb the Manitou Incline."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 2</span>
+                            <span class="scene-location">INTERIOR: Don weighing backpack</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don steps on scale with backpack, adjusting items</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Almost there, I don't think I can really fit anything else in this backpack so I'll say that's close enough."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Close-up of scale display, items in backpack</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 3</span>
+                            <span class="scene-location">EXTERIOR: Base of Manitou Incline</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don at base of incline with backpack</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Okay so for those that don't know, the Manitou Incline is basically this staircase that goes straight up a mountain in Manitou Springs."
+                                </div>
+                                <div class="dialogue">
+                                    "I actually run this pretty often, my PR is 45 minutes, I think it's gonna take a bit longer today."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Wide shot of incline, establishing shot</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 4</span>
+                            <span class="scene-location">EXTERIOR: Climbing the incline</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don struggling up the stairs with weighted backpack</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "It is crazy to think that I used to carry this much weight around."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Various angles of Don climbing, breathing heavily, showing effort</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Photography:</div>
+                                <div class="note">Capture stills of Don's struggle, determination</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 5</span>
+                            <span class="scene-location">EXTERIOR: Stopping on incline</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don stops, drops backpack</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    <em>*Drops backpack*</em>
+                                </div>
+                                <div class="dialogue">
+                                    "I don't think it's going to happen today."
+                                </div>
+                                <div class="dialogue">
+                                    "The key to a healthy lifestyle is obviously diet & exercise, but it can be so hard to get to a place where you can even begin to consider diet & exercise when every step takes this much effort."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Close-up of backpack hitting ground, Don catching breath</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 6</span>
+                            <span class="scene-location">TRANSITION: Brand message</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don speaking to camera, more composed</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "At Ascent Trim & Wellness we've helped so many people get back to who they are— who they want to be."
+                                </div>
+                                <div class="dialogue">
+                                    "You don't need to carry this with you for the rest of your life."
+                                </div>
+                                <div class="dialogue">
+                                    <em>*tries to lift backpack*</em>
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Consider B-roll of Don without backpack, walking freely</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 7</span>
+                            <span class="scene-location">OUTRO: Call to action</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don at base or on incline, confident stance</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "If you're ready to be you again, contact us today to start your wellness journey."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Ascent Trim & Wellness logo, contact information overlay</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section" id="script2">
+                <h2 class="heading_h2">Script 2: Personal Story</h2>
+                
+                <div class="script-card">
+                    <div class="script-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Concept:</span> Don's authentic weight loss journey and motivation for starting the clinic
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Estimated Runtime:</span> 60-75 seconds
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Primary Message:</span> Building trust through vulnerability and establishing credibility
+                        </div>
+                    </div>
+
+                    <h3 class="heading_h3">Scene Breakdown</h3>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 1</span>
+                            <span class="scene-location">OPENING: Bold statement</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don speaking directly to camera</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "If these drugs existed when I was overweight— I would've saved myself from 2 near-death experiences during surgery, 10s of thousands of dollars, and probably at least an extra 5 years of life."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 2</span>
+                            <span class="scene-location">ARCHIVE FOOTAGE: Historical context</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Historic photos of Don at various stages</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Back when I went through my weight-loss journey every strategy was either invasive & dangerous, or just downright ridiculous."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Scan through provided historic photos, showing progression</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 3</span>
+                            <span class="scene-location">STORY 1: Jenny Craig experience</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Continue with photos or Don speaking to camera</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "I was 8 years old when I tried Jenny Craig. I must've mis-interpreted something because I ended up eating half my weight in carrots everyday. After all that, I didn't lose any weight and I still have to wear glasses."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Light moment—keep tone warm despite difficult subject</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 4</span>
+                            <span class="scene-location">STORY 2: Military and surgery</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don speaking directly, serious tone</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "And then much later, after getting discharged from the military for being overweight, I tried gastric bypass and almost died."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 5</span>
+                            <span class="scene-location">TRANSITION: Why Ascent exists</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don speaking with conviction</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "I opened Ascent Trim & Wellness because it's the kind of weight loss clinic that I wish was there for me when I was going through my wellness journey."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 6</span>
+                            <span class="scene-location">B-ROLL: Current Don</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Footage of Don being active (running, hiking, exercising)</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "There is so much shame surrounding obesity, I want every patient to know that we see you for who you are."
+                                </div>
+                                <div class="dialogue">
+                                    "And we're here to help you get back to you again."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Capture multiple activities showing healthy, active lifestyle</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Photography:</div>
+                                <div class="note">Lifestyle photos for static ads</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 7</span>
+                            <span class="scene-location">OUTRO: Call to action</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Return to Don speaking to camera or overlay on active footage</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Click 'Book Now' to schedule your consultation with us today."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Ascent logo, booking button/link overlay</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section" id="script3">
+                <h2 class="heading_h2">Script 3: Educational</h2>
+                
+                <div class="script-card">
+                    <div class="script-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Concept:</span> Science-based explanation of how modern weight loss treatments work
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Estimated Runtime:</span> 60-75 seconds
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Primary Message:</span> Educating viewers on the biological basis of hunger and modern solutions
+                        </div>
+                    </div>
+
+                    <div class="note" style="margin-bottom: 20px;">
+                        <strong>Production Note:</strong> This script relies heavily on A-Roll of Don explaining, supplemented with animations/stock footage to illustrate concepts
+                    </div>
+
+                    <h3 class="heading_h3">Scene Breakdown</h3>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 1</span>
+                            <span class="scene-location">OPENING: The problem</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don speaking to camera</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Here's the problem with traditional weight loss: it treats hunger like it's optional."
+                                </div>
+                                <div class="dialogue">
+                                    "Just eat less. Just move more. Just have more self-control."
+                                </div>
+                                <div class="dialogue">
+                                    "But hunger isn't a choice— it's a chemical signal demanding attention."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 2</span>
+                            <span class="scene-location">EXPLANATION: How hunger works</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Animation or diagram showing brain and digestive system</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "So we eat. And if everything is working correctly our brain gets a message that we're full, and it's time to stop eating."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Animation Notes:</div>
+                                <div class="note">Simple graphic showing eating → signal → brain</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 3</span>
+                            <span class="scene-location">THE PROBLEM: GLP-1 breakdown</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Animation showing hormone pathway and degradation</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "That message comes from a hormone called GLP-1, but the problem is it has a half-life of 2 minutes, meaning that for so many people that signal is almost entirely degraded by the time it reaches your brain, meaning you're going to keep eating."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Animation Notes:</div>
+                                <div class="note">Show GLP-1 hormone fading/degrading before reaching brain receptor</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 4</span>
+                            <span class="scene-location">THE SOLUTION: Modern treatments</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Animation showing treatment activating brain receptor</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Modern weight loss treatments work by activating the same receptor in your brain that GLP-1 activates."
+                                </div>
+                                <div class="dialogue">
+                                    "Rather than trying to shrink the stomach or the esophagus, they address the root of the problem— the brain that thinks it still needs more food."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Animation Notes:</div>
+                                <div class="note">Highlight brain receptor activation, show contrast with surgical approaches</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 5</span>
+                            <span class="scene-location">THE RESULT: How body responds</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Continue animation or return to Don</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Your pancreas responds. Your brain responds. And for the first time, the hunger quiets."
+                                </div>
+                                <div class="dialogue">
+                                    "This isn't about restriction or surgery. It's about giving your brain the information it's been missing."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <div class="scene-header">
+                            <span class="scene-number">SCENE 6</span>
+                            <span class="scene-location">OUTRO: Call to action</span>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-section">
+                                <div class="scene-section-title">Visual:</div>
+                                <div class="scene-section-content">Don speaking to camera with confidence</div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">Voiceover/Dialogue:</div>
+                                <div class="dialogue">
+                                    "Book your consultation now and discover what sustainable weight loss actually feels like."
+                                </div>
+                            </div>
+                            <div class="scene-section">
+                                <div class="scene-section-title">B-Roll Notes:</div>
+                                <div class="note">Ascent logo, booking button/link overlay</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        document.getElementById('navLinks').classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Mobile navigation toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && 
+                !hamburger.contains(e.target) && 
+                !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
