@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETM-CO Production Dossier - November 10, 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --primary-bg: #f8f3de;
+            --secondary-bg: #0a0a0d;
+            --primary: #1a6aff;
+            --secondary: #fc5130;
+            --shadow-light: rgba(10, 10, 13, 0.1);
+            --shadow-medium: rgba(10, 10, 13, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--primary-bg);
+            color: var(--secondary-bg);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 1000;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .location-info {
+            background: rgba(10, 10, 13, 0.03);
+            border: 1px solid rgba(10, 10, 13, 0.15);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .location-info p {
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .schedule-item {
+            background: var(--primary-bg);
+            border: 1px solid rgba(10, 10, 13, 0.15);
+            border-radius: 6px;
+            box-shadow: 0 2px 8px var(--shadow-light);
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .time-block {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .activity {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .talent-required {
+            background: rgba(252, 81, 48, 0.1);
+            border-left: 3px solid var(--secondary);
+            padding: 10px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .script-section {
+            background: rgba(10, 10, 13, 0.03);
+            border: 1px solid rgba(10, 10, 13, 0.15);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .script-content {
+            font-family: 'Courier New', monospace;
+            background: white;
+            border: 1px solid rgba(10, 10, 13, 0.1);
+            border-radius: 4px;
+            padding: 20px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .speaker {
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .direction {
+            font-style: italic;
+            color: #666;
+        }
+
+        .scene-heading {
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--primary-bg);
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .tag.secondary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        .notes {
+            background: rgba(26, 106, 255, 0.1);
+            border-left: 3px solid var(--primary);
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+
+        .interview-questions {
+            background: white;
+            border: 1px solid rgba(10, 10, 13, 0.1);
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+        .interview-questions ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .interview-questions li {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .schedule-item,
+            .script-section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .schedule-item,
+            .script-section {
+                padding: 15px;
+            }
+
+            .script-content {
+                padding: 15px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Production Dossier</h1>
+            <h2 style="color: var(--secondary); margin-top: 5px;">Education Through Music - Colorado</h2>
+            <p style="font-weight: 700; font-size: 1.1rem; margin-top: 10px;">Shoot Date: November 10, 2025</p>
+        </div>
+
+        <div class="location-info">
+            <h3>Location</h3>
+            <p><span class="highlight">Centennial, A School for Expeditionary Learning</span></p>
+            <p>4665 N Raleigh St, Denver, CO 80212</p>
+        </div>
+
+        <h2>Production Schedule</h2>
+
+        <div class="schedule-item">
+            <div class="time-block">9:00 AM - 9:50 AM</div>
+            <div class="activity">Set up lighting and shot for Script #1</div>
+            <div class="notes">Note: Students may be present in the room during setup</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="time-block">9:50 AM - 10:35 AM</div>
+            <div class="activity">Film Script #1 with Ms. Maggie's third grade class</div>
+            <div class="activity">B-roll of interactive lesson with class</div>
+            <div class="talent-required">
+                <strong>Talent Required:</strong><br>
+                • Clifton Williams<br>
+                • Ms. Maggie's third grade class<br>
+                • Narrator (to read narration on set for timing)
+            </div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="time-block">10:35 AM - 10:45 AM</div>
+            <div class="activity">Tear down unnecessary lighting & equipment</div>
+            <div class="activity">Set up lock-down shots for empty classroom</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="time-block">10:45 AM - 11:00 AM</div>
+            <div class="activity">Film empty classroom shots + detail shots</div>
+            <div class="notes">Note: Classroom will remain empty until 11:30 AM if extended time needed</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="time-block">11:35 AM - 12:00 PM</div>
+            <div class="activity">Strike equipment and move to filming location for Script #3</div>
+            <div class="notes">Note: Location will be staged by ETM-CO ahead of time</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="time-block">12:00 PM - 1:00 PM</div>
+            <div class="activity">Film Karissa monologue for Script #2</div>
+            <div class="notes">Note: Location will be staged ahead of time</div>
+            <div class="talent-required">
+                <strong>Talent Required:</strong><br>
+                • Karissa (ETM-CO)
+            </div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="time-block">1:00 PM - 2:30 PM</div>
+            <div class="activity">Film parent and student interviews for Script #3</div>
+            <div class="talent-required">
+                <strong>Talent Required:</strong><br>
+                • Parents (multiple)<br>
+                • Students (multiple)
+            </div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="time-block">2:30 PM - 3:00 PM</div>
+            <div class="activity">Record Mallory's narration for Script #1 and Script #3</div>
+            <div class="talent-required">
+                <strong>Talent Required:</strong><br>
+                • Mallory (Narrator)
+            </div>
+        </div>
+
+        <h2>Script Breakdown</h2>
+
+        <div class="script-section">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0;">Script #1</h3>
+                <span class="tag" style="margin-left: 15px;">9:50 AM - 10:35 AM</span>
+            </div>
+            
+            <div class="notes">
+                <strong>Special Requirement:</strong> An additional person is needed to read the narration while filming to ensure timing is correct.
+            </div>
+
+            <p style="font-weight: 700; margin-top: 15px; margin-bottom: 5px;">Talent Required:</p>
+            <p style="font-weight: 500;">• Clifton Williams</p>
+            <p style="font-weight: 500;">• Ms. Maggie's third grade class</p>
+            <p style="font-weight: 500;">• On-set narrator for timing</p>
+
+            <div class="script-content"><span class="scene-heading">SCENE: Brightly lit, colorful classroom. Saturated colors. Clifton Williams in center frame, surrounded by instruments. Slow dolly zoom out.</span>
+
+<span class="speaker">NARRATOR</span> <span class="direction">(warm, curious)</span>
+This is Clifton Williams.
+
+<span class="speaker">CLIFTON</span> <span class="direction">(smiling)</span>
+That's me.
+
+<span class="speaker">NARRATOR</span>
+He's shared the stage with John Legend, directed Emmy-winning concerts, and performed for audiences around the world.
+
+<span class="speaker">NARRATOR</span> <span class="direction">(playful)</span>
+So… what's he doing here — in a Denver public-school classroom?
+
+<span class="speaker">CLIFTON</span> <span class="direction">(grinning)</span>
+Ask Education Through Music Colorado.
+Or better yet — ask them.
+
+<span class="speaker">STUDENTS</span> <span class="direction">(laughing, shouting)</span>
+Can we play now?!
+
+<span class="direction">(Music bursts in — percussion, laughter, rhythm. The classroom glows.)</span>
+
+<span class="speaker">NARRATOR</span> <span class="direction">(soft, reflective)</span>
+There's something magical happening here, especially when you realize that not long ago, this classroom was silent.
+
+<span class="direction">(The camera slows — Clifton and students fade from frame. Empty chairs. Dusty instruments. Silence.)</span>
+
+<span class="speaker">NARRATOR</span> <span class="direction">(somber)</span>
+Like so many schools in Colorado, music education was lost to budget cuts — the instruments gathered dust, and the silence was heavy.
+
+<span class="speaker">NARRATOR</span> <span class="direction">(hopeful, inspiring)</span>
+At a school near you, a teacher is still missing.
+
+When you help bring music back, you give children more than melodies — you give them confidence, belonging, and the courage to express who they are.
+
+<span class="direction">(The setting returns to life — color, rhythm, and joy fill the room.)</span>
+
+<span class="scene-heading">CO Gives Day Hook</span>
+This Colorado Gives Day, donate to Education Through Music - Colorado and bring music back to our schools.
+
+<span class="scene-heading">Regular Hook</span>
+Bring music back to our schools, donate to Education through Music Colorado today.
+
+<span class="scene-heading">[ON-SCREEN TEXT:]</span>
+DONATE NOW
+Education Through Music – Colorado | Colorado Gives Day</div>
+        </div>
+
+        <div class="script-section">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0;">Script #2</h3>
+                <span class="tag" style="margin-left: 15px;">12:00 PM - 1:00 PM</span>
+            </div>
+
+            <p style="font-weight: 700; margin-bottom: 5px;">Talent Required:</p>
+            <p style="font-weight: 500;">• Karissa (ETM-CO representative)</p>
+
+            <div class="notes">
+                Location will be staged by ETM-CO ahead of time
+            </div>
+
+            <div class="script-content"><span class="scene-heading">SCENE: Direct-to-camera monologue — Karissa from Education Through Music–Colorado</span>
+
+<span class="speaker">KARISSA</span> <span class="direction">(direct, warm)</span>
+What do you remember about your elementary school music class?
+
+For many children in Colorado, the answer is nothing.
+
+Because they've never had one.
+
+<span class="speaker">KARISSA</span> <span class="direction">(earnest, conversational)</span>
+Our schools are deeply underfunded, and music is often the first thing to disappear.
+
+Walk into some of these classrooms and you'll still see the traces of what once was —
+a dusty piano, silent instruments, the absence of a teacher who once filled the room with song.
+
+The music is gone. The classroom is quiet.
+
+<span class="direction">(B-roll: joyful classroom → fades to dark, empty classroom.)</span>
+
+<span class="speaker">KARISSA</span> <span class="direction">(warm, inspiring)</span>
+At Education Through Music–Colorado, we believe music isn't an extra — it's essential.
+
+Research shows that when students make music, they build confidence, focus, and a love of learning that carries into everything they do.
+
+That's why we place dedicated, full-time music teachers in under-resourced public schools — making music part of every child's school day.
+
+We support our music teachers, and others in the state, in building engaging music programs for all learners. In these ways, we ensure students in marginalized communities have equitable access to the benefits of music education.
+
+<span class="direction">(B-roll: unused instrument → student playing; empty desk → Clifton teaching; students smiling, moving, creating.)</span>
+
+<span class="speaker">KARISSA</span> <span class="direction">(closing, heartfelt)</span>
+Think back to your own music class —
+that teacher, that instrument, that song you played together that still lives in your mind.
+
+That mix of anticipation and pride standing on stage, your family watching.
+
+Help us give that memory to another child- because music changes everything.
+
+<span class="scene-heading">CO Gives Day Hook</span>
+This Colorado Gives Day, donate to Education Through Music - Colorado and bring music back to our schools.
+
+<span class="scene-heading">Regular Hook</span>
+Bring music back to our schools, donate to Education through Music Colorado today.
+
+<span class="scene-heading">[ON-SCREEN TEXT:]</span>
+DONATE NOW
+Education Through Music – Colorado | Colorado Gives Day</div>
+        </div>
+
+        <div class="script-section">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0;">Script #3</h3>
+                <span class="tag" style="margin-left: 15px;">1:00 PM - 2:30 PM</span>
+                <span class="tag secondary" style="margin-left: 0;">Interviews</span>
+            </div>
+
+            <p style="font-weight: 700; margin-bottom: 5px;">Talent Required:</p>
+            <p style="font-weight: 500;">• Parents (multiple for interviews)</p>
+            <p style="font-weight: 500;">• Students (multiple for interviews)</p>
+
+            <div class="script-content"><span class="speaker">NARRATOR</span> <span class="direction">(soft, reflective)</span>
+This music classroom is missing something.
+
+There's a piano, xylophones, recorders, desks…
+
+But where's the teacher? Where are the students? Where is the music?
+
+<span class="direction">(B-roll: dim light, dust on a drum, a chair tipped forward. Silence.)</span>
+
+<span class="speaker">NARRATOR</span> <span class="direction">(hopeful, rising)</span>
+This classroom is the reality for so many students across Colorado in schools facing budget cuts.
+
+But at this school, something changed.
+
+<span class="direction">B-Roll (Transition shot to showing active music class)</span>
+
+<span class="speaker">STUDENT</span> <span class="direction">(smiling)</span>
+We started having music class when I was in third grade, and it's my favorite class.
+
+<span class="speaker">PARENT</span> <span class="direction">(warm voice)</span>
+I see it — she's more confident, more joyful every day.
+
+<span class="speaker">STUDENT</span> <span class="direction">(excited)</span>
+Now I can show my family what I learned!
+
+<span class="speaker">PARENT</span> <span class="direction">(laughing softly)</span>
+He sings to us after dinner — it fills the house again.
+
+<span class="speaker">STUDENT</span> <span class="direction">(beaming)</span>
+When we play together, it feels like we can do anything.
+
+<span class="speaker">PARENT</span> <span class="direction">(emotional)</span>
+Music gave my child a voice — and gave us something to share.
+
+<span class="direction">(Montage: students performing, parents clapping, smiles, colors, rhythm.)</span>
+
+<span class="speaker">NARRATOR</span> <span class="direction">(firm, inspiring)</span>
+When school budgets are tight, music is the first program to be cut.
+
+And when music disappears, children lose more than songs — they lose confidence, curiosity, and the joy of being heard.
+
+But with your support, we can place dedicated, full-time music teachers in under-resourced public schools — making music part of every child's school day.
+
+<span class="scene-heading">CO Gives Day Hook</span>
+This Colorado Gives Day, donate to Education Through Music - Colorado and bring music back to our schools.
+
+<span class="scene-heading">Regular Hook</span>
+Bring music back to our schools, donate to Education through Music Colorado today.
+
+<span class="direction">(Music rises; final shot of a child hugging their parents after a performance.)</span>
+
+<span class="scene-heading">[ON-SCREEN TEXT:]</span>
+DONATE NOW
+Education Through Music – Colorado | Colorado Gives Day</div>
+
+            <h3 style="margin-top: 25px;">Interview Questions</h3>
+            
+            <div class="interview-questions">
+                <p style="font-weight: 700; color: var(--primary);">Questions for Parents:</p>
+                <ul>
+                    <li>How has music class impacted your child?</li>
+                    <li>Does your child bring music home with them?</li>
+                    <li>Was having a music class for your child important to you? Why?</li>
+                </ul>
+            </div>
+
+            <div class="interview-questions">
+                <p style="font-weight: 700; color: var(--primary);">Questions for Students:</p>
+                <ul>
+                    <li>What grade were you in when you had your first music class?</li>
+                    <li>How do you feel about music class?</li>
+                    <li>What are your favorite things about music class?</li>
+                    <li>Who is your music teacher, what is he like?</li>
+                    <li>What are your favorite things about Mr. Clifton?</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
