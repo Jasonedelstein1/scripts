@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ascent Trim & Wellness: Video Production Scripts</title>
+    <title>Ascent Trim & Wellness: Production Dossier</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -179,6 +179,7 @@
             font-size: 0.85rem;
             font-weight: 700;
             margin-bottom: 12px;
+            margin-right: 8px;
         }
 
         .tag.is-accent-primary {
@@ -193,7 +194,7 @@
             border: 2px solid var(--secondary);
         }
 
-        .script-card {
+        .info-card {
             background: var(--primary-bg);
             border: 1px solid rgba(10, 10, 13, 0.15);
             border-radius: 6px;
@@ -202,22 +203,92 @@
             margin-bottom: 30px;
         }
 
-        .script-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(10, 10, 13, 0.1);
+        .alert-card {
+            background: rgba(252, 81, 48, 0.1);
+            border: 2px solid var(--secondary);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
         }
 
-        .meta-item {
+        .alert-card h4 {
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .location-card {
+            background: rgba(10, 10, 13, 0.03);
+            border: 1px solid rgba(10, 10, 13, 0.1);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .schedule-item {
+            background: rgba(10, 10, 13, 0.03);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .time-block {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-content {
+            margin-bottom: 30px;
+        }
+
+        .document-info {
+            background: rgba(10, 10, 13, 0.05);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
             font-size: 0.95rem;
         }
 
         .meta-label {
             font-weight: 800;
             color: var(--secondary);
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
         }
 
         .script-content {
@@ -261,27 +332,6 @@
             font-weight: 500;
         }
 
-        .hero-content {
-            margin-bottom: 30px;
-        }
-
-        .document-info {
-            background: rgba(10, 10, 13, 0.05);
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .info-item {
-            font-size: 0.95rem;
-        }
-
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -308,12 +358,8 @@
                 padding: 25px 0;
             }
 
-            .script-card {
-                padding: 20px;
-            }
-
-            .script-content {
-                padding: 20px;
+            .two-column {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -337,9 +383,11 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#overview">Overview</a></li>
-                <li><a href="#script1">The Weight We Carry</a></li>
-                <li><a href="#script2">Why I Built This</a></li>
-                <li><a href="#script3">How It Works</a></li>
+                <li><a href="#action-items">Action Items</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#equipment">Equipment</a></li>
+                <li><a href="#scripts">Scripts</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -354,26 +402,32 @@
             <section class="section" id="overview">
                 <div class="hero-content">
                     <h1 class="heading_h1">Ascent Trim & Wellness</h1>
-                    <h2 class="heading_h2" style="color: var(--secondary); margin-top: 5px;">Video Production Scripts</h2>
+                    <h2 class="heading_h2" style="color: var(--secondary); margin-top: 5px;">Production Dossier</h2>
                     <p class="body-text">
-                        Production documentation for <span class="highlight">three essential video advertisements</span> featuring Don's authentic weight loss journey and expertise. Each script is designed to resonate with prospective patients through storytelling, education, and genuine connection.
+                        Hey Don — this document contains everything you need to know for our video shoot on <span class="highlight">December 16, 2025</span>. We'll be filming three video advertisements featuring your authentic weight loss journey and expertise. Below you'll find what you need to prepare, where we'll be filming, our schedule for the day, and the complete scripts we'll be working from.
                     </p>
                 </div>
 
                 <div class="document-info">
-                    <h3 class="heading_h4" style="margin-bottom: 15px;">Document Information</h3>
+                    <h3 class="heading_h4" style="margin-bottom: 15px;">Shoot Information</h3>
                     <div class="info-grid">
                         <div class="info-item">
-                            <span class="meta-label">Client:</span> Ascent Trim & Wellness
+                            <span class="meta-label">Shoot Date:</span> Monday, December 16, 2025
                         </div>
                         <div class="info-item">
-                            <span class="meta-label">Subject:</span> Don (Owner/Founder)
+                            <span class="meta-label">Call Time:</span> 11:00 AM at Manitou Incline
                         </div>
                         <div class="info-item">
-                            <span class="meta-label">Production Date:</span> TBD
+                            <span class="meta-label">Estimated Wrap:</span> 7:00 PM at your home
                         </div>
                         <div class="info-item">
-                            <span class="meta-label">Document Version:</span> 1.0
+                            <span class="meta-label">Total Shoot Time:</span> Approximately 8 hours
+                        </div>
+                        <div class="info-item">
+                            <span class="meta-label">Production Company:</span> The Salt Lick Denver
+                        </div>
+                        <div class="info-item">
+                            <span class="meta-label">Producer:</span> Jason Edelstein
                         </div>
                     </div>
                 </div>
@@ -381,21 +435,377 @@
 
             <hr class="section-divider">
 
-            <section class="section" id="script1">
-                <h2 class="heading_h2">Script 1: The Weight We Carry</h2>
-                
-                <div class="script-card">
-                    <div class="script-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Subtitle:</span> Tight Cut with "Just Get Back to You"
+            <section class="section" id="action-items">
+                <h2 class="heading_h2">What You Need to Prepare</h2>
+
+                <div class="alert-card">
+                    <h4 class="heading_h4">⚠ Action Items Before December 16th</h4>
+                    <p class="body-text">Here's what you need to handle before our shoot. Some items are critical (like the Incline reservation), while others just need confirmation so we're all on the same page:</p>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">1. Manitou Incline Reservations</h3>
+                    <p class="body-text">
+                        <span class="highlight">Status: REQUIRED - Must book immediately</span>
+                    </p>
+                    <p class="body-text">
+                        Free online reservations required at <strong>coloradosprings.gov/incline</strong>. Reservations available 4-8 weeks in advance. Book for 11:00 AM arrival window on December 16, 2025.
+                    </p>
+                    <ul class="checklist">
+                        <li>Make reservations for all crew members hiking the Incline</li>
+                        <li>Each person must sign a waiver online</li>
+                        <li>Print or save digital confirmation with transaction ID</li>
+                        <li>Arrive with proof of reservation to receive wristband from attendant</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">2. Parking Reservation</h3>
+                    <p class="body-text">
+                        <span class="highlight">Status: RECOMMENDED</span>
+                    </p>
+                    <p class="body-text">
+                        Iron Springs Chateau parking (444 Ruxton Ave) - $15 for 4 hours, cash only. This is the closest parking to the Incline base with no shuttle required. Bring exact cash.
+                    </p>
+                    <ul class="checklist">
+                        <li>Confirm parking availability for December 16th</li>
+                        <li>Bring $15 cash per vehicle (exact change recommended)</li>
+                        <li>Must show parking receipt to Incline attendant</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">3. Friend for Piggyback Scene</h3>
+                    <p class="body-text">
+                        <span class="highlight">Status: OPEN - Needs confirmation</span>
+                    </p>
+                    <p class="body-text">
+                        Script 1 includes a scene where Don carries a friend piggyback to demonstrate weight. Need to confirm someone is available and willing to participate in this scene on shoot day.
+                    </p>
+                    <ul class="checklist">
+                        <li>Confirm friend availability for December 16th (can be crew member)</li>
+                        <li>Weight should be displayed on screen during scene</li>
+                        <li>Location: Either at Don's home or at Incline parking lot</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">4. 50lb Bag of Concrete</h3>
+                    <p class="body-text">
+                        <span class="highlight">Status: OPEN - Needs confirmation</span>
+                    </p>
+                    <p class="body-text">
+                        Script 1 includes a scene where Don attempts to lift a 50lb bag of concrete. Suggest using Don's garage instead of filming at Lowe's/Home Depot.
+                    </p>
+                    <ul class="checklist">
+                        <li>Confirm Don has 50lb concrete bag in garage, or purchase one</li>
+                        <li>If purchasing, get before shoot day</li>
+                        <li>Garage should be reasonably lit and clean for filming</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">5. Archival Photos/Footage</h3>
+                    <p class="body-text">
+                        <span class="highlight">Status: REQUIRED</span>
+                    </p>
+                    <p class="body-text">
+                        Scripts 1 and 2 require archival photos of Don at his heaviest weight, including post-surgery images.
+                    </p>
+                    <ul class="checklist">
+                        <li>Gather all relevant archival photos</li>
+                        <li>Scan at high resolution if physical prints</li>
+                        <li>Organize by theme: weight loss journey, surgery recovery, waterskiing, tractor-trailer</li>
+                        <li>Bring digital files on shoot day for reference</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">6. Weighted Vest & Scale</h3>
+                    <p class="body-text">
+                        <span class="highlight">Status: REQUIRED</span>
+                    </p>
+                    <p class="body-text">
+                        100lb weighted vest with plates is the primary prop for Script 1. Portable scale needed at Incline parking lot.
+                    </p>
+                    <ul class="checklist">
+                        <li>Confirm Don has weighted vest and 100lbs of plates</li>
+                        <li>Test vest fit and comfort before shoot day</li>
+                        <li>Bring portable scale to parking lot for weighing scene</li>
+                        <li>Ensure scale has fresh batteries</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section" id="schedule">
+                <h2 class="heading_h2">Production Schedule</h2>
+                <p class="body-text">
+                    Total shoot time: 8 hours. Schedule includes buffer time for travel, setup, and potential weather delays in December.
+                </p>
+
+                <div class="schedule-item">
+                    <div class="time-block">11:00 AM - 11:30 AM</div>
+                    <h4 class="heading_h4">Call Time & Setup at Manitou Incline</h4>
+                    <p class="body-text">
+                        Arrive at Iron Springs Chateau parking (444 Ruxton Ave). Check in with Incline attendant, receive wristbands. Unload equipment, prep weighted vest and scale.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Key Tasks:</strong> Camera setup, test audio equipment, organize props, final shot list review
+                    </p>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time-block">11:30 AM - 1:00 PM</div>
+                    <h4 class="heading_h4">Script 1: The Weight We Carry - Incline Filming</h4>
+                    <p class="body-text">
+                        Primary filming location. Shoot all scenes requiring the Manitou Incline including weighted vest sequences, climbing footage, and aerial drone shots.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Scenes to capture:</strong> Parking lot weighing, incline base introduction, climbing struggle, vest drop, summit/descent, unencumbered climbing
+                    </p>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time-block">1:00 PM - 1:30 PM</div>
+                    <h4 class="heading_h4">Travel to Garden of the Gods</h4>
+                    <p class="body-text">
+                        Pack up Incline location. Drive to Garden of the Gods (approximately 14 minutes). Scout and set up at ideal B-roll locations.
+                    </p>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time-block">1:30 PM - 2:15 PM</div>
+                    <h4 class="heading_h4">Garden of the Gods B-Roll</h4>
+                    <p class="body-text">
+                        Capture scenic B-roll for Scripts 2 and 3. Focus on symbolic footage: walking through formations, reflective moments, natural beauty shots.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Shot ideas:</strong> Walking through Central Garden, Balanced Rock area, Kissing Camels perspective, panoramic views with Pikes Peak
+                    </p>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time-block">2:15 PM - 3:00 PM</div>
+                    <h4 class="heading_h4">Travel & Setup at Don's Home</h4>
+                    <p class="body-text">
+                        Pack up from Garden of the Gods. Travel to Don's residence. Unload equipment and set up for interior A-roll filming.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Setup requirements:</strong> Main interview area, lighting for direct-to-camera segments, audio check, garage prep for concrete bag scene
+                    </p>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time-block">3:00 PM - 5:00 PM</div>
+                    <h4 class="heading_h4">Interior A-Roll Filming - All Scripts</h4>
+                    <p class="body-text">
+                        Film all direct-to-camera segments for Scripts 1, 2, and 3. This is the primary speaking content where Don delivers the key messages.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Coverage needed:</strong>
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 8px;">
+                        <li>Script 1: Opening and closing remarks (if not captured at Incline)</li>
+                        <li>Script 2: All direct-to-camera segments about building the clinic</li>
+                        <li>Script 3: Educational content explaining GLP-1 and modern treatments</li>
+                        <li>Garage scene with 50lb concrete bag</li>
+                        <li>Piggyback scene with friend (if at home)</li>
+                        <li>Multiple takes for each segment with varying pacing/emotion</li>
+                    </ul>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time-block">5:00 PM - 6:00 PM</div>
+                    <h4 class="heading_h4">Additional B-Roll & Transition Shots</h4>
+                    <p class="body-text">
+                        Capture any remaining B-roll needed at Don's home or nearby locations. This includes lifestyle shots, detail work, and buffer time for re-shooting if needed.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Shot ideas:</strong> Running shoes on trail, park bench at sunset, coffee shop scene, detail shots for transitions
+                    </p>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time-block">6:00 PM - 7:00 PM</div>
+                    <h4 class="heading_h4">Voiceover Recording Session</h4>
+                    <p class="body-text">
+                        Record clean voiceover audio for Scripts 1 and 3. Set up quiet recording environment with minimal background noise.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Voiceover Requirements:</strong>
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 8px;">
+                        <li><strong>Script 1:</strong> Opening VO ("In 1998 I weighed more than four hundred pounds...") and closing VO ("You do not have to carry this forever...")</li>
+                        <li><strong>Script 3:</strong> Multiple VO segments explaining the science throughout the video</li>
+                        <li>Record multiple takes for tone/pacing options</li>
+                        <li>Total estimated recording time: 45-60 minutes</li>
+                    </ul>
+                </div>
+
+                <div class="alert-card" style="margin-top: 30px;">
+                    <h4 class="heading_h4">Schedule Notes</h4>
+                    <p class="body-text">
+                        December weather in Colorado Springs can be unpredictable. Sunrise: ~7:10 AM, Sunset: ~4:40 PM. Most outdoor filming must be completed by 2:00 PM for optimal lighting. Interior filming scheduled for late afternoon when natural light is limited.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section" id="locations">
+                <h2 class="heading_h2">Location Details</h2>
+
+                <div class="location-card">
+                    <h3 class="heading_h3">Location 1: Manitou Incline</h3>
+                    <div class="two-column">
+                        <div>
+                            <p class="body-text"><strong>Address:</strong> Base access from Ruxton Avenue, Manitou Springs, CO 80829</p>
+                            <p class="body-text"><strong>Parking:</strong> Iron Springs Chateau, 444 Ruxton Ave - $15 cash only, 4 hours</p>
+                            <p class="body-text"><strong>Hours:</strong> 6:00 AM - 3:00 PM (Winter hours)</p>
+                            <p class="body-text"><strong>Reservation:</strong> REQUIRED - coloradosprings.gov/incline</p>
                         </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Estimated Runtime:</span> 60-90 seconds
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Primary Message:</span> The hardest part is taking the first step back to yourself
+                        <div>
+                            <p class="body-text"><strong>What to bring:</strong></p>
+                            <ul style="margin-left: 20px;">
+                                <li>Reservation confirmation (digital or printed)</li>
+                                <li>Parking receipt</li>
+                                <li>ID for all crew members</li>
+                                <li>$15 cash for parking</li>
+                            </ul>
                         </div>
                     </div>
+                    <p class="body-text" style="margin-top: 15px;">
+                        <strong>Key Details:</strong> 2,768 stairs climbing 2,000 vertical feet. Extreme difficulty rating. Must show proof of reservation and parking to attendant at base - will receive wristband. No pets allowed. Free shuttle available from Hiawatha Gardens but Iron Springs parking is closest to base.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Shot List:</strong>
+                    </p>
+                    <ul class="checklist">
+                        <li>Parking lot scene with scale and weighted vest</li>
+                        <li>Don weighing himself with backpack, adjusting weight</li>
+                        <li>Wide establishing shot of Incline from base</li>
+                        <li>Don's introduction to camera at base</li>
+                        <li>Climbing sequence - multiple angles, close-ups of feet/hands/struggle</li>
+                        <li>Breathing/effort shots showing difficulty</li>
+                        <li>Vest drop moment (dramatic audio important)</li>
+                        <li>On-camera segment about the struggle</li>
+                        <li>Unencumbered climbing after removing vest</li>
+                        <li>Drone: aerial pull-back reveal, tracking shot to summit</li>
+                        <li>Final on-camera segments with backdrop</li>
+                    </ul>
+                </div>
+
+                <div class="location-card">
+                    <h3 class="heading_h3">Location 2: Garden of the Gods</h3>
+                    <div class="two-column">
+                        <div>
+                            <p class="body-text"><strong>Address:</strong> 1805 N. 30th Street, Colorado Springs, CO 80904</p>
+                            <p class="body-text"><strong>Parking:</strong> Free - multiple lots throughout park</p>
+                            <p class="body-text"><strong>Hours:</strong> 5:00 AM - 10:00 PM daily</p>
+                            <p class="body-text"><strong>Reservation:</strong> None required</p>
+                        </div>
+                        <div>
+                            <p class="body-text"><strong>Distance from Incline:</strong> ~14 minutes</p>
+                            <p class="body-text"><strong>Recommended parking:</strong> Northern parking lot for Central Garden access</p>
+                        </div>
+                    </div>
+                    <p class="body-text" style="margin-top: 15px;">
+                        <strong>Key Details:</strong> Free entry and parking. 1,367-acre park with towering red rock formations. Multiple trails from easy to moderate. Visitor Center open 9 AM - 5 PM. Central Garden Trail is paved and wheelchair accessible.
+                    </p>
+                    <p class="body-text" style="margin-top: 10px;">
+                        <strong>Shot List:</strong>
+                    </p>
+                    <ul class="checklist">
+                        <li>Walking through Central Garden path</li>
+                        <li>Reflective moments among rock formations</li>
+                        <li>Balanced Rock area for symbolic imagery</li>
+                        <li>Kissing Camels formation with Pikes Peak backdrop</li>
+                        <li>Don walking trails - medium and wide shots</li>
+                        <li>Contemplative close-ups</li>
+                        <li>Scenic overlooks with panoramic views</li>
+                        <li>Natural beauty shots for Script 2 transitions</li>
+                        <li>Family hiking past (if opportunity presents)</li>
+                        <li>Wind through trees/nature details</li>
+                    </ul>
+                </div>
+
+                <div class="location-card">
+                    <h3 class="heading_h3">Location 3: Don's Home</h3>
+                    <div class="two-column">
+                        <div>
+                            <p class="body-text"><strong>Primary Use:</strong> A-roll (direct-to-camera segments)</p>
+                            <p class="body-text"><strong>Secondary Use:</strong> Voiceover recording</p>
+                            <p class="body-text"><strong>Tertiary Use:</strong> Additional B-roll and prop scenes</p>
+                        </div>
+                        <div>
+                            <p class="body-text"><strong>Setup Requirements:</strong></p>
+                            <ul style="margin-left: 20px;">
+                                <li>Main interview area with clean background</li>
+                                <li>Lighting setup for consistent look</li>
+                                <li>Quiet space for voiceover recording</li>
+                                <li>Garage access for concrete bag scene</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="body-text" style="margin-top: 15px;">
+                        <strong>Shot List:</strong>
+                    </p>
+                    <ul class="checklist">
+                        <li>All Script 2 direct-to-camera segments</li>
+                        <li>All Script 3 direct-to-camera segments and explanations</li>
+                        <li>Garage scene: Don attempting to lift 50lb concrete bag</li>
+                        <li>Piggyback scene with friend (if not shot at Incline)</li>
+                        <li>Online research montage (scrolling weighted vest options)</li>
+                        <li>Weighted vest unboxing and plate loading</li>
+                        <li>Additional lifestyle B-roll as needed</li>
+                        <li>Detail shots: running shoes, personal items, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="location-card">
+                    <h3 class="heading_h3">Alternate/Additional B-Roll Locations</h3>
+                    <p class="body-text">
+                        If time permits or weather requires alternate plans, these locations can provide additional B-roll footage:
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Barr Trail:</strong> Accessible from Manitou Incline summit or separate trailhead - good for hiking footage</li>
+                        <li><strong>Local coffee shop:</strong> For "talking over coffee" scene in Script 2</li>
+                        <li><strong>Local park:</strong> Park bench at sunrise/sunset shots for Script 2</li>
+                        <li><strong>Store window reflections:</strong> Symbolic "starting again" imagery</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section" id="equipment">
+                <h2 class="heading_h2">Equipment Note</h2>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">Recommended: Microspikes for Manitou Incline</h3>
+                    <p class="body-text">
+                        December conditions on the Incline can include ice and packed snow, especially in shaded areas and near the top. Microspikes provide traction and safety for the climb. If you don't have a pair, they're available at most outdoor retailers in Colorado Springs.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="section" id="scripts">
+                <h2 class="heading_h2">Complete Scripts</h2>
+
+                <div class="info-card">
+                    <h3 class="heading_h3">Script 1: The Weight We Carry</h3>
+                    <div style="margin-top: 10px;">
+                        <span class="tag is-accent-primary">PRIMARY OUTDOOR SHOOT</span>
+                        <span class="tag secondary">VOICEOVER REQUIRED</span>
+                    </div>
+                    <p class="body-text" style="margin-top: 15px;">
+                        <strong>Estimated Runtime:</strong> 60-90 seconds<br>
+                        <strong>Primary Message:</strong> The hardest part is taking the first step back to yourself
+                    </p>
 
                     <div class="script-content">
                         <p class="action">OPENING - ARCHIVAL</p>
@@ -408,18 +818,18 @@
                         <p class="action">AT HOME - ONLINE</p>
                         <p class="script-line">I scroll ridiculous ways to recreate the weight. Fat suits. Padded vests. Heavy packs. A small laugh. Head shake.</p>
 
+                        <p class="action">GARAGE - CONCRETE BAG</p>
+                        <p class="script-line">I try to lift a fifty pound bag of concrete from the garage. It barely moves.</p>
+
+                        <div class="dialogue">
+                            <p class="script-line"><strong>On camera:</strong> So two hundred pounds is four of these. That's not happening.</p>
+                        </div>
+
                         <p class="action">BUDDY SEQUENCE</p>
                         <p class="script-line">I hoist a friend for a piggyback up a few steps. His weight flashes on screen.</p>
 
                         <div class="dialogue">
                             <p class="script-line"><strong>On camera:</strong> Yeah. This is about right. <em>Grimace face mixed with laughter</em></p>
-                        </div>
-
-                        <p class="action">LOWE'S OR HOME DEPOT</p>
-                        <p class="script-line">I try to lift a fifty pound bag of concrete. It barely moves.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>On camera:</strong> So two hundred pounds is four of these. That's not happening.</p>
                         </div>
 
                         <p class="action">VEST ARRIVES</p>
@@ -460,25 +870,18 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <hr class="section-divider">
+                <hr class="section-divider">
 
-            <section class="section" id="script2">
-                <h2 class="heading_h2">Script 2: Why I Built This Clinic</h2>
-                
-                <div class="script-card">
-                    <div class="script-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Subtitle:</span> Final Working Draft (Clean Narrative Version)
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Estimated Runtime:</span> 60-75 seconds
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Primary Message:</span> Building trust through vulnerability and authentic motivation
-                        </div>
+                <div class="info-card">
+                    <h3 class="heading_h3">Script 2: Why I Built This Clinic</h3>
+                    <div style="margin-top: 10px;">
+                        <span class="tag is-accent-primary">A-ROLL + B-ROLL</span>
                     </div>
+                    <p class="body-text" style="margin-top: 15px;">
+                        <strong>Estimated Runtime:</strong> 60-75 seconds<br>
+                        <strong>Primary Message:</strong> Building trust through vulnerability and authentic motivation
+                    </p>
 
                     <div class="script-content">
                         <p class="action">OPENING — CLOSE SHOT, DIRECT TO CAMERA</p>
@@ -520,25 +923,19 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <hr class="section-divider">
+                <hr class="section-divider">
 
-            <section class="section" id="script3">
-                <h2 class="heading_h2">Script 3: How It Works</h2>
-                
-                <div class="script-card">
-                    <div class="script-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Subtitle:</span> Final Script (Don on Camera + VO)
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Estimated Runtime:</span> 60-75 seconds
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Primary Message:</span> Educating on the science behind modern weight loss treatments
-                        </div>
+                <div class="info-card">
+                    <h3 class="heading_h3">Script 3: How It Works</h3>
+                    <div style="margin-top: 10px;">
+                        <span class="tag is-accent-primary">EDUCATIONAL</span>
+                        <span class="tag secondary">VOICEOVER REQUIRED</span>
                     </div>
+                    <p class="body-text" style="margin-top: 15px;">
+                        <strong>Estimated Runtime:</strong> 60-75 seconds<br>
+                        <strong>Primary Message:</strong> Educating on the science behind modern weight loss treatments
+                    </p>
 
                     <div class="script-content">
                         <p class="action">OPEN – A-ROLL (Don, direct to camera)</p>
