@@ -12,10 +12,6 @@
             --secondary-bg: #0a0a0d;
             --primary: #1a6aff;
             --secondary: #fc5130;
-            --primary-bg-alpha: rgba(248, 243, 222, 0.9);
-            --secondary-bg-alpha: rgba(10, 10, 13, 0.1);
-            --shadow-light: rgba(10, 10, 13, 0.1);
-            --shadow-medium: rgba(10, 10, 13, 0.2);
         }
 
         * {
@@ -25,100 +21,16 @@
         }
 
         body {
-            font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background-color: var(--primary-bg);
             color: var(--secondary-bg);
             line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            background-color: var(--primary-bg);
-            border-bottom: 1px solid rgba(10, 10, 13, 0.15);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px var(--shadow-light);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-        }
-
-        .company-name {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--secondary-bg);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--secondary-bg);
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--secondary-bg);
-            transition: all 0.3s ease;
-        }
-
-        .main-content {
-            width: 100%;
-            background-color: var(--primary-bg);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            padding: 40px 0;
-        }
-
-        .section-divider {
-            border: none;
-            height: 1px;
-            background: linear-gradient(135deg, rgba(10, 10, 13, 0.1), rgba(10, 10, 13, 0.05));
-            margin: 40px 0;
+            padding: 40px 20px;
         }
 
         .heading_h1 {
@@ -126,14 +38,14 @@
             font-weight: 1000;
             color: var(--primary);
             line-height: 1;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .heading_h2 {
             font-size: clamp(1.5rem, 4vw, 2.25rem);
             font-weight: 800;
             color: var(--primary);
-            line-height: 1;
+            margin-top: 40px;
             margin-bottom: 15px;
         }
 
@@ -141,16 +53,8 @@
             font-size: clamp(1.25rem, 3vw, 1.75rem);
             font-weight: 800;
             color: var(--secondary);
-            line-height: 1.2;
+            margin-top: 25px;
             margin-bottom: 12px;
-        }
-
-        .heading_h4 {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            font-weight: 800;
-            color: var(--secondary);
-            line-height: 1.2;
-            margin-bottom: 10px;
         }
 
         .body-text {
@@ -158,18 +62,6 @@
             font-weight: 400;
             line-height: 1.7;
             margin-bottom: 15px;
-            color: var(--secondary-bg);
-        }
-
-        .ui-label {
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: var(--secondary-bg);
-        }
-
-        .highlight {
-            color: var(--secondary);
-            font-weight: 700;
         }
 
         .tag {
@@ -185,859 +77,368 @@
         .tag.is-accent-primary {
             background-color: var(--primary);
             color: var(--primary-bg);
-            border: 2px solid var(--primary);
         }
 
         .tag.secondary {
             background-color: var(--secondary);
             color: var(--primary-bg);
-            border: 2px solid var(--secondary);
         }
 
         .info-card {
             background: var(--primary-bg);
             border: 1px solid rgba(10, 10, 13, 0.15);
             border-radius: 6px;
-            box-shadow: 0 2px 8px var(--shadow-light);
             padding: 25px;
-            margin-bottom: 30px;
-        }
-
-        .alert-card {
-            background: rgba(252, 81, 48, 0.1);
-            border: 2px solid var(--secondary);
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 25px;
-        }
-
-        .alert-card h4 {
-            color: var(--secondary);
-            margin-bottom: 12px;
-        }
-
-        .location-card {
-            background: rgba(10, 10, 13, 0.03);
-            border: 1px solid rgba(10, 10, 13, 0.1);
-            border-radius: 6px;
-            padding: 20px;
             margin-bottom: 20px;
         }
 
-        .schedule-item {
-            background: rgba(10, 10, 13, 0.03);
-            border-left: 4px solid var(--primary);
-            padding: 15px 20px;
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
             margin-bottom: 15px;
-            border-radius: 4px;
         }
 
-        .time-block {
-            font-weight: 800;
-            color: var(--primary);
-            font-size: 1.1rem;
+        li {
             margin-bottom: 8px;
         }
 
-        .hero-content {
-            margin-bottom: 30px;
-        }
-
-        .document-info {
-            background: rgba(10, 10, 13, 0.05);
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .info-item {
-            font-size: 0.95rem;
-        }
-
-        .meta-label {
-            font-weight: 800;
-            color: var(--secondary);
-        }
-
-        .checklist {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .checklist li {
-            padding: 8px 0 8px 30px;
-            position: relative;
-            font-size: 1rem;
-        }
-
-        .checklist li:before {
-            content: "☐";
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-            color: var(--primary);
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
+        strong {
+            font-weight: 700;
         }
 
         .script-content {
-            background: rgba(10, 10, 13, 0.03);
-            border: 1px solid rgba(10, 10, 13, 0.1);
-            border-radius: 6px;
-            padding: 25px;
             margin-top: 20px;
         }
 
-        .script-line {
-            margin-bottom: 20px;
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-
         .action {
-            font-style: italic;
-            color: var(--secondary-bg);
-            margin: 15px 0;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-top: 15px;
+            margin-bottom: 8px;
         }
 
         .dialogue {
-            margin: 10px 0;
-            padding-left: 20px;
-            border-left: 3px solid var(--primary);
+            margin-left: 20px;
+            margin-bottom: 12px;
         }
 
         .voiceover {
-            margin: 10px 0;
-            padding-left: 20px;
-            border-left: 3px solid var(--secondary);
+            margin-left: 20px;
+            font-style: italic;
+            margin-bottom: 12px;
         }
 
         .note {
-            background: rgba(252, 81, 48, 0.1);
+            background: rgba(10, 10, 13, 0.03);
+            padding: 12px;
             border-left: 3px solid var(--secondary);
-            padding: 12px 15px;
             margin: 15px 0;
-            font-size: 0.95rem;
-            font-weight: 500;
         }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: var(--primary-bg);
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 4px 12px var(--shadow-medium);
-                border-top: 1px solid rgba(10, 10, 13, 0.15);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .section {
-                padding: 25px 0;
-            }
-
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                transition: none !important;
-                animation: none !important;
-            }
+        .highlight {
+            color: var(--secondary);
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo-container">
-                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" fill="#1a6aff"/>
-                    <path d="M30 40 Q50 20, 70 40 T70 60 Q50 80, 30 60 T30 40" fill="#fc5130"/>
-                </svg>
-                <span class="company-name">The Salt Lick Denver</span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#action-items">Action Items</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#equipment">Equipment</a></li>
-                <li><a href="#scripts">Scripts</a></li>
+    <div class="container">
+        <h1 class="heading_h1">Ascent Trim & Wellness</h1>
+        <p class="body-text">Production Dossier for Don</p>
+        
+        <div class="info-card">
+            <p class="body-text"><strong>Shoot Date:</strong> Monday, December 16, 2025</p>
+            <p class="body-text"><strong>Time:</strong> 11:00 AM - 3:00 PM (4 hours)</p>
+            <p class="body-text"><strong>Producer:</strong> Jason Edelstein, The Salt Lick Denver</p>
+        </div>
+
+        <h2 class="heading_h2">Action Items</h2>
+
+        <div class="info-card">
+            <h3 class="heading_h3">1. Manitou Incline Reservations</h3>
+            <p class="body-text"><span class="highlight">REQUIRED</span></p>
+            <p class="body-text">
+                Book free reservations at <strong>coloradosprings.gov/incline</strong> for 11:00 AM window. Reservations available 4-8 weeks in advance. Winter hours: 6:00 AM - 3:00 PM with 45 reservations per 30-minute slot.
+            </p>
+            <p class="body-text">
+                Each person must have a reservation and will receive a wristband from the attendant at the base.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">2. Parking</h3>
+            <p class="body-text">
+                <strong>Iron Springs Chateau</strong> - 444 Ruxton Avenue
+            </p>
+            <ul>
+                <li>$15 for 4 hours (cash only)</li>
+                <li>Closest to Incline base - no shuttle needed</li>
+                <li>Must show parking receipt with reservation at check-in</li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">3. Friend for Piggyback Scene</h3>
+            <p class="body-text"><span class="highlight">NEEDS CONFIRMATION</span></p>
+            <p class="body-text">
+                Script 1 includes scene where Don tries to carry a friend piggyback to demonstrate weight burden.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">4. 50lb Concrete Bag</h3>
+            <p class="body-text"><span class="highlight">NEEDS CONFIRMATION</span></p>
+            <p class="body-text">
+                Script 1 includes garage scene with 50lb concrete bag. Confirm you have this at your home.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">5. Weighted Vest & Scale</h3>
+            <p class="body-text"><span class="highlight">REQUIRED</span></p>
+            <p class="body-text">
+                Confirm you have weighted vest with 100lbs of plates. Bring portable scale to parking lot for weighing scene.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">6. Microspikes</h3>
+            <p class="body-text">
+                Recommended for December ice/snow conditions on the Incline.
+            </p>
+        </div>
+
+        <h2 class="heading_h2">Schedule</h2>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Manitou Incline</h3>
+            <p class="body-text">
+                Film all outdoor scenes for Script 1. Parking lot weighing scene, Incline base introduction, climbing with weighted vest, vest drop, unencumbered climbing.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Garden of the Gods</h3>
+            <p class="body-text">
+                <strong>Address:</strong> 1805 N. 30th Street, Colorado Springs, CO 80904<br>
+                <strong>Hours:</strong> 5:00 AM - 10:00 PM<br>
+                <strong>Parking:</strong> Free<br>
+                <strong>Distance:</strong> Approximately 14 minutes from Manitou Incline
+            </p>
+            <p class="body-text">
+                B-roll for Scripts 2 and 3. Walking through Central Garden, rock formations, scenic overlooks with Pikes Peak, reflective moments.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Your Home</h3>
+            <p class="body-text">
+                A-roll filming for all three scripts. All direct-to-camera segments, garage scene with concrete bag, piggyback scene, online research montage, vest unboxing.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Voiceover Recording</h3>
+            <p class="body-text">
+                Scripts 1 and 3 require voiceover segments. Record in quiet space after A-roll filming.
+            </p>
+        </div>
+
+        <h2 class="heading_h2">Location Details</h2>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Manitou Incline</h3>
+            <p class="body-text">
+                <strong>Base Access:</strong> From Ruxton Avenue, Manitou Springs<br>
+                <strong>Trail:</strong> 2,768 stairs, 2,000 vertical feet, extreme difficulty<br>
+                <strong>Important:</strong> No pets allowed, no downhill use of Incline
+            </p>
+        </div>
+
+        <h2 class="heading_h2">Scripts</h2>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Script 1: The Weight We Carry</h3>
+            <div style="margin-top: 10px;">
+                <span class="tag is-accent-primary">60-90 SECONDS</span>
+                <span class="tag secondary">VOICEOVER REQUIRED</span>
+            </div>
+
+            <div class="script-content">
+                <p class="action">OPENING MONTAGE — ARCHIVAL PHOTOS & VOICEOVER</p>
+
+                <div class="voiceover">
+                    <p><strong>Voice over:</strong> In 1998 I weighed more than four hundred pounds. I couldn't walk up a flight of stairs without stopping. I couldn't fit in a restaurant booth. I couldn't see my feet.</p>
+                    <p>I had three weight-loss surgeries. Two of them nearly killed me. The weight came back every time. And every time it did, I lost a little more of myself.</p>
+                </div>
+
+                <p class="action">CUT TO — DON'S HOME, LATE AT NIGHT</p>
+                <p>Don scrolling through medical weight-loss options on his laptop. Face lit by screen.</p>
+
+                <p class="action">CUT TO — DON'S GARAGE OR HOME DEPOT PARKING LOT</p>
+                <p>Don tries to lift a 50-pound bag of concrete. Struggles. Stops. Shakes his head.</p>
+
+                <p class="action">CUT TO — DON WITH A FRIEND, OUTDOORS</p>
+                <p>Don tries to carry someone piggyback. Takes maybe three steps. Stops, breathing hard. They both laugh, but it's not funny.</p>
+
+                <p class="action">CUT TO — DON'S HOME</p>
+                <p>Don unboxing a weighted vest. Camera close on his face as he realizes the weight of what he's about to do. Loads plates into the vest. Settles for 100 pounds.</p>
+
+                <p class="action">CUT TO — MANITOU INCLINE, PARKING LOT, MORNING</p>
+                <p>Wide shot. Don steps onto a portable scale wearing the 100-pound vest. Numbers settle.</p>
+
+                <div class="dialogue">
+                    <p><strong>On camera:</strong> This is what a hundred pounds feels like. For some people, this is Tuesday.</p>
+                </div>
+
+                <p class="action">WIDE ESTABLISHING SHOT — MANITOU INCLINE</p>
+                <p>The incline rising impossibly steep in front of us.</p>
+
+                <div class="dialogue">
+                    <p><strong>On camera at base:</strong> I'm going to try to climb this wearing a hundred pounds. Because that's what it feels like to wake up every single day when your body is fighting you.</p>
+                </div>
+
+                <p class="action">CUT TO — CLIMBING SEQUENCE</p>
+                <p>Track me up the stairs. Close-ups of feet. Hands gripping rails. Breathing gets harder. Sweat.</p>
+
+                <div class="dialogue">
+                    <p><strong>On camera, still breathing hard:</strong> Everyone says eat better, move more. Sure. But when every step feels like this, starting is the hardest part.</p>
+                </div>
+
+                <p>I stop, drop to one knee, unclip the vest. It hits with a dull thud.</p>
+
+                <div class="dialogue">
+                    <p><strong>On camera:</strong> That's why I founded Ascent Trim and Wellness. Because sometimes the hardest part of the climb is taking the first step back to you.</p>
+                </div>
+
+                <p>I climb again without the vest. Track me to the summit or cut to summit.</p>
+
+                <div class="voiceover">
+                    <p><strong>Voice over:</strong> You do not have to carry this forever. Let's start getting it off for good, so you can just get back to you.</p>
+                </div>
+
+                <div class="note">
+                    <strong>End card:</strong> Ascent Trim and Wellness — Just feel like you again.
+                </div>
             </div>
         </div>
-    </nav>
 
-    <div class="main-content">
-        <div class="container">
-            <section class="section" id="overview">
-                <div class="hero-content">
-                    <h1 class="heading_h1">Ascent Trim & Wellness</h1>
-                    <h2 class="heading_h2" style="color: var(--secondary); margin-top: 5px;">Production Dossier</h2>
-                    <p class="body-text">
-                        Hey Don — this document contains everything you need to know for our video shoot on <span class="highlight">December 16, 2025</span>. We'll be filming three video advertisements featuring your authentic weight loss journey and expertise. Below you'll find what you need to prepare, where we'll be filming, our schedule for the day, and the complete scripts we'll be working from.
-                    </p>
+        <div class="info-card">
+            <h3 class="heading_h3">Script 2: Why I Built This Clinic</h3>
+            <div style="margin-top: 10px;">
+                <span class="tag is-accent-primary">60-75 SECONDS</span>
+            </div>
+
+            <div class="script-content">
+                <p class="action">OPENING — CLOSE SHOT, DIRECT TO CAMERA</p>
+
+                <div class="dialogue">
+                    <p>I didn't build this clinic to make money. I built it because I know exactly what it feels like to wake up and not recognize yourself. To feel tired before the day even starts. To try again and again and never feel like you're winning.</p>
                 </div>
 
-                <div class="document-info">
-                    <h3 class="heading_h4" style="margin-bottom: 15px;">Shoot Information</h3>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="meta-label">Shoot Date:</span> Monday, December 16, 2025
-                        </div>
-                        <div class="info-item">
-                            <span class="meta-label">Call Time:</span> 11:00 AM at Manitou Incline
-                        </div>
-                        <div class="info-item">
-                            <span class="meta-label">Estimated Wrap:</span> 7:00 PM at your home
-                        </div>
-                        <div class="info-item">
-                            <span class="meta-label">Total Shoot Time:</span> Approximately 8 hours
-                        </div>
-                        <div class="info-item">
-                            <span class="meta-label">Production Company:</span> The Salt Lick Denver
-                        </div>
-                        <div class="info-item">
-                            <span class="meta-label">Producer:</span> Jason Edelstein
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <p class="action">CUT TO — ARCHIVAL PHOTOS OR PERSONAL FOOTAGE</p>
+                <p>Photos of me at my heaviest. Photos that tell the truth. Diet programs, gym memberships, promises that never lasted.</p>
 
-            <hr class="section-divider">
-
-            <section class="section" id="action-items">
-                <h2 class="heading_h2">What You Need to Prepare</h2>
-
-                <div class="alert-card">
-                    <h4 class="heading_h4">⚠ Action Items Before December 16th</h4>
-                    <p class="body-text">Here's what you need to handle before our shoot. Some items are critical (like the Incline reservation), while others just need confirmation so we're all on the same page:</p>
+                <div class="dialogue">
+                    <p><strong>ON CAMERA:</strong> I tried everything. Fad diets, starvation, surgeries that almost took my life. Every time I lost a little weight, I lost a little more of myself.</p>
                 </div>
 
-                <div class="info-card">
-                    <h3 class="heading_h3">1. Manitou Incline Reservations</h3>
-                    <p class="body-text">
-                        <span class="highlight">Status: REQUIRED - Must book immediately</span>
-                    </p>
-                    <p class="body-text">
-                        Free online reservations required at <strong>coloradosprings.gov/incline</strong>. Reservations available 4-8 weeks in advance. Book for 11:00 AM arrival window on December 16, 2025.
-                    </p>
-                    <ul class="checklist">
-                        <li>Make reservations for all crew members hiking the Incline</li>
-                        <li>Each person must sign a waiver online</li>
-                        <li>Print or save digital confirmation with transaction ID</li>
-                        <li>Arrive with proof of reservation to receive wristband from attendant</li>
-                    </ul>
+                <p class="action">B-ROLL — REAL WORLD STAND INS (NO CLINIC)</p>
+                <p>Shots of a park bench at sunrise. A pair of running shoes on a trail. A reflection in a store window. Moments that show what it means to start again.</p>
+
+                <div class="dialogue">
+                    <p><strong>ON CAMERA:</strong> The truth is, people don't need more motivation. They need a way to start that actually works. And for the first time in my life, medicine can help people do that safely.</p>
                 </div>
 
-                <div class="info-card">
-                    <h3 class="heading_h3">2. Parking Reservation</h3>
-                    <p class="body-text">
-                        <span class="highlight">Status: RECOMMENDED</span>
-                    </p>
-                    <p class="body-text">
-                        Iron Springs Chateau parking (444 Ruxton Ave) - $15 for 4 hours, cash only. This is the closest parking to the Incline base with no shuttle required. Bring exact cash.
-                    </p>
-                    <ul class="checklist">
-                        <li>Confirm parking availability for December 16th</li>
-                        <li>Bring $15 cash per vehicle (exact change recommended)</li>
-                        <li>Must show parking receipt to Incline attendant</li>
-                    </ul>
+                <p class="action">B-ROLL — SYMBOLIC FOOTAGE</p>
+                <p>Walking through Garden of the Gods. Talking with someone over coffee. Watching a family hike past on the trail. Natural, everyday scenes that show connection and hope.</p>
+
+                <div class="dialogue">
+                    <p><strong>ON CAMERA:</strong> That's why I built Ascent Trim and Wellness. Because I wish something like this existed when I needed it most. And now it does.</p>
                 </div>
 
-                <div class="info-card">
-                    <h3 class="heading_h3">3. Friend for Piggyback Scene</h3>
-                    <p class="body-text">
-                        <span class="highlight">Status: OPEN - Needs confirmation</span>
-                    </p>
-                    <p class="body-text">
-                        Script 1 includes a scene where Don carries a friend piggyback to demonstrate weight. Need to confirm someone is available and willing to participate in this scene on shoot day.
-                    </p>
-                    <ul class="checklist">
-                        <li>Confirm friend availability for December 16th (can be crew member)</li>
-                        <li>Weight should be displayed on screen during scene</li>
-                        <li>Location: Either at Don's home or at Incline parking lot</li>
-                    </ul>
+                <p class="action">B-ROLL — TRAIL OVERLOOK</p>
+                <p>Wind moving through the trees. Quiet. Reflective. Hopeful.</p>
+
+                <div class="dialogue">
+                    <p><strong>ON CAMERA:</strong> If you're ready to start again, we'll do it together. Because the hardest climb isn't up the mountain. It's back to yourself.</p>
                 </div>
 
-                <div class="info-card">
-                    <h3 class="heading_h3">4. 50lb Bag of Concrete</h3>
-                    <p class="body-text">
-                        <span class="highlight">Status: OPEN - Needs confirmation</span>
-                    </p>
-                    <p class="body-text">
-                        Script 1 includes a scene where Don attempts to lift a 50lb bag of concrete. Suggest using Don's garage instead of filming at Lowe's/Home Depot.
-                    </p>
-                    <ul class="checklist">
-                        <li>Confirm Don has 50lb concrete bag in garage, or purchase one</li>
-                        <li>If purchasing, get before shoot day</li>
-                        <li>Garage should be reasonably lit and clean for filming</li>
-                    </ul>
+                <div class="note">
+                    <strong>END CARD:</strong> Ascent Trim and Wellness logo — Just feel like you again.
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Script 3: How It Works</h3>
+            <div style="margin-top: 10px;">
+                <span class="tag is-accent-primary">60-75 SECONDS</span>
+                <span class="tag secondary">VOICEOVER REQUIRED</span>
+            </div>
+
+            <div class="script-content">
+                <p class="action">OPEN – A-ROLL (Don, direct to camera)</p>
+
+                <div class="dialogue">
+                    <p><strong>DON:</strong> "Most weight-loss advice treats hunger like it's optional. 'Just eat less.' 'Just move more.' 'Just have more discipline.' You've heard it all."</p>
                 </div>
 
-                <div class="info-card">
-                    <h3 class="heading_h3">5. Archival Photos/Footage</h3>
-                    <p class="body-text">
-                        <span class="highlight">Status: REQUIRED</span>
-                    </p>
-                    <p class="body-text">
-                        Scripts 1 and 2 require archival photos of Don at his heaviest weight, including post-surgery images.
-                    </p>
-                    <ul class="checklist">
-                        <li>Gather all relevant archival photos</li>
-                        <li>Scan at high resolution if physical prints</li>
-                        <li>Organize by theme: weight loss journey, surgery recovery, waterskiing, tractor-trailer</li>
-                        <li>Bring digital files on shoot day for reference</li>
-                    </ul>
+                <p class="action">CUTAWAY – SIMPLE B-ROLL / GRAPHIC (humans eating, subtle brain/gut graphic)</p>
+
+                <div class="voiceover">
+                    <p><strong>DON (V.O.):</strong> "But hunger isn't a character flaw. It's a chemical signal. And for a lot of people, that signal is misfiring."</p>
                 </div>
 
-                <div class="info-card">
-                    <h3 class="heading_h3">6. Weighted Vest & Scale</h3>
-                    <p class="body-text">
-                        <span class="highlight">Status: REQUIRED</span>
-                    </p>
-                    <p class="body-text">
-                        100lb weighted vest with plates is the primary prop for Script 1. Portable scale needed at Incline parking lot.
-                    </p>
-                    <ul class="checklist">
-                        <li>Confirm Don has weighted vest and 100lbs of plates</li>
-                        <li>Test vest fit and comfort before shoot day</li>
-                        <li>Bring portable scale to parking lot for weighing scene</li>
-                        <li>Ensure scale has fresh batteries</li>
-                    </ul>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="section" id="schedule">
-                <h2 class="heading_h2">Production Schedule</h2>
-                <p class="body-text">
-                    Total shoot time: 8 hours. Schedule includes buffer time for travel, setup, and potential weather delays in December.
-                </p>
-
-                <div class="schedule-item">
-                    <div class="time-block">11:00 AM - 11:30 AM</div>
-                    <h4 class="heading_h4">Call Time & Setup at Manitou Incline</h4>
-                    <p class="body-text">
-                        Arrive at Iron Springs Chateau parking (444 Ruxton Ave). Check in with Incline attendant, receive wristbands. Unload equipment, prep weighted vest and scale.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Key Tasks:</strong> Camera setup, test audio equipment, organize props, final shot list review
-                    </p>
+                <div class="note">
+                    <strong>GRAPHIC:</strong> FOOD → GUT → HORMONE → BRAIN
                 </div>
 
-                <div class="schedule-item">
-                    <div class="time-block">11:30 AM - 1:00 PM</div>
-                    <h4 class="heading_h4">Script 1: The Weight We Carry - Incline Filming</h4>
-                    <p class="body-text">
-                        Primary filming location. Shoot all scenes requiring the Manitou Incline including weighted vest sequences, climbing footage, and aerial drone shots.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Scenes to capture:</strong> Parking lot weighing, incline base introduction, climbing struggle, vest drop, summit/descent, unencumbered climbing
-                    </p>
+                <div class="voiceover">
+                    <p><strong>DON (V.O.):</strong> "When everything's working right, your gut releases a hormone called GLP-1. It tells your brain: 'We've eaten. You can stop now.'</p>
+                    <p>The problem? GLP-1 has a half-life of about two minutes. For many people, that signal fades before it ever reaches the brain."</p>
                 </div>
 
-                <div class="schedule-item">
-                    <div class="time-block">1:00 PM - 1:30 PM</div>
-                    <h4 class="heading_h4">Travel to Garden of the Gods</h4>
-                    <p class="body-text">
-                        Pack up Incline location. Drive to Garden of the Gods (approximately 14 minutes). Scout and set up at ideal B-roll locations.
-                    </p>
+                <div class="note">
+                    <strong>ANIMATION:</strong> GLP-1 SIGNAL FADING BEFORE RECEPTOR
                 </div>
 
-                <div class="schedule-item">
-                    <div class="time-block">1:30 PM - 2:15 PM</div>
-                    <h4 class="heading_h4">Garden of the Gods B-Roll</h4>
-                    <p class="body-text">
-                        Capture scenic B-roll for Scripts 2 and 3. Focus on symbolic footage: walking through formations, reflective moments, natural beauty shots.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Shot ideas:</strong> Walking through Central Garden, Balanced Rock area, Kissing Camels perspective, panoramic views with Pikes Peak
-                    </p>
+                <div class="voiceover">
+                    <p><strong>DON (V.O.):</strong> "So you're not overeating because you lack willpower. Your brain simply isn't getting the 'I'm full' message."</p>
                 </div>
 
-                <div class="schedule-item">
-                    <div class="time-block">2:15 PM - 3:00 PM</div>
-                    <h4 class="heading_h4">Travel & Setup at Don's Home</h4>
-                    <p class="body-text">
-                        Pack up from Garden of the Gods. Travel to Don's residence. Unload equipment and set up for interior A-roll filming.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Setup requirements:</strong> Main interview area, lighting for direct-to-camera segments, audio check, garage prep for concrete bag scene
-                    </p>
+                <p class="action">BACK TO A-ROLL – Don</p>
+
+                <div class="dialogue">
+                    <p><strong>DON:</strong> "Modern medical weight-loss works by activating the same receptor GLP-1 is supposed to hit… and keeping that signal active long enough for your brain to register fullness."</p>
                 </div>
 
-                <div class="schedule-item">
-                    <div class="time-block">3:00 PM - 5:00 PM</div>
-                    <h4 class="heading_h4">Interior A-Roll Filming - All Scripts</h4>
-                    <p class="body-text">
-                        Film all direct-to-camera segments for Scripts 1, 2, and 3. This is the primary speaking content where Don delivers the key messages.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Coverage needed:</strong>
-                    </p>
-                    <ul style="margin-left: 20px; margin-top: 8px;">
-                        <li>Script 1: Opening and closing remarks (if not captured at Incline)</li>
-                        <li>Script 2: All direct-to-camera segments about building the clinic</li>
-                        <li>Script 3: Educational content explaining GLP-1 and modern treatments</li>
-                        <li>Garage scene with 50lb concrete bag</li>
-                        <li>Piggyback scene with friend (if at home)</li>
-                        <li>Multiple takes for each segment with varying pacing/emotion</li>
-                    </ul>
+                <div class="note">
+                    <strong>SPLIT VISUAL:</strong> "OLD MODEL" VS "NEW MODEL"
                 </div>
 
-                <div class="schedule-item">
-                    <div class="time-block">5:00 PM - 6:00 PM</div>
-                    <h4 class="heading_h4">Additional B-Roll & Transition Shots</h4>
-                    <p class="body-text">
-                        Capture any remaining B-roll needed at Don's home or nearby locations. This includes lifestyle shots, detail work, and buffer time for re-shooting if needed.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Shot ideas:</strong> Running shoes on trail, park bench at sunset, coffee shop scene, detail shots for transitions
-                    </p>
+                <div class="voiceover">
+                    <p><strong>DON (V.O.):</strong> "It's not about shrinking your stomach. It's not about forcing restriction.</p>
+                    <p>It's about correcting the chemical messaging that drives appetite."</p>
                 </div>
 
-                <div class="schedule-item">
-                    <div class="time-block">6:00 PM - 7:00 PM</div>
-                    <h4 class="heading_h4">Voiceover Recording Session</h4>
-                    <p class="body-text">
-                        Record clean voiceover audio for Scripts 1 and 3. Set up quiet recording environment with minimal background noise.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Voiceover Requirements:</strong>
-                    </p>
-                    <ul style="margin-left: 20px; margin-top: 8px;">
-                        <li><strong>Script 1:</strong> Opening VO ("In 1998 I weighed more than four hundred pounds...") and closing VO ("You do not have to carry this forever...")</li>
-                        <li><strong>Script 3:</strong> Multiple VO segments explaining the science throughout the video</li>
-                        <li>Record multiple takes for tone/pacing options</li>
-                        <li>Total estimated recording time: 45-60 minutes</li>
-                    </ul>
+                <p class="action">FINAL A-ROLL – Don, steady and clear</p>
+
+                <div class="dialogue">
+                    <p><strong>DON:</strong> "When that signal finally reaches the brain the way it should, your hunger quiets. Your metabolism steadies. And eating starts to feel… normal again."</p>
                 </div>
 
-                <div class="alert-card" style="margin-top: 30px;">
-                    <h4 class="heading_h4">Schedule Notes</h4>
-                    <p class="body-text">
-                        December weather in Colorado Springs can be unpredictable. Sunrise: ~7:10 AM, Sunset: ~4:40 PM. Most outdoor filming must be completed by 2:00 PM for optimal lighting. Interior filming scheduled for late afternoon when natural light is limited.
-                    </p>
-                </div>
-            </section>
+                <p class="action">CTA – A-ROLL + OVERLAY</p>
 
-            <hr class="section-divider">
-
-            <section class="section" id="locations">
-                <h2 class="heading_h2">Location Details</h2>
-
-                <div class="location-card">
-                    <h3 class="heading_h3">Location 1: Manitou Incline</h3>
-                    <div class="two-column">
-                        <div>
-                            <p class="body-text"><strong>Address:</strong> Base access from Ruxton Avenue, Manitou Springs, CO 80829</p>
-                            <p class="body-text"><strong>Parking:</strong> Iron Springs Chateau, 444 Ruxton Ave - $15 cash only, 4 hours</p>
-                            <p class="body-text"><strong>Hours:</strong> 6:00 AM - 3:00 PM (Winter hours)</p>
-                            <p class="body-text"><strong>Reservation:</strong> REQUIRED - coloradosprings.gov/incline</p>
-                        </div>
-                        <div>
-                            <p class="body-text"><strong>What to bring:</strong></p>
-                            <ul style="margin-left: 20px;">
-                                <li>Reservation confirmation (digital or printed)</li>
-                                <li>Parking receipt</li>
-                                <li>ID for all crew members</li>
-                                <li>$15 cash for parking</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="body-text" style="margin-top: 15px;">
-                        <strong>Key Details:</strong> 2,768 stairs climbing 2,000 vertical feet. Extreme difficulty rating. Must show proof of reservation and parking to attendant at base - will receive wristband. No pets allowed. Free shuttle available from Hiawatha Gardens but Iron Springs parking is closest to base.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Shot List:</strong>
-                    </p>
-                    <ul class="checklist">
-                        <li>Parking lot scene with scale and weighted vest</li>
-                        <li>Don weighing himself with backpack, adjusting weight</li>
-                        <li>Wide establishing shot of Incline from base</li>
-                        <li>Don's introduction to camera at base</li>
-                        <li>Climbing sequence - multiple angles, close-ups of feet/hands/struggle</li>
-                        <li>Breathing/effort shots showing difficulty</li>
-                        <li>Vest drop moment (dramatic audio important)</li>
-                        <li>On-camera segment about the struggle</li>
-                        <li>Unencumbered climbing after removing vest</li>
-                        <li>Drone: aerial pull-back reveal, tracking shot to summit</li>
-                        <li>Final on-camera segments with backdrop</li>
-                    </ul>
+                <div class="dialogue">
+                    <p><strong>DON:</strong> "If you're ready for weight loss that makes sense — and finally feels sustainable — book your free consultation with Ascent Trim & Wellness."</p>
                 </div>
 
-                <div class="location-card">
-                    <h3 class="heading_h3">Location 2: Garden of the Gods</h3>
-                    <div class="two-column">
-                        <div>
-                            <p class="body-text"><strong>Address:</strong> 1805 N. 30th Street, Colorado Springs, CO 80904</p>
-                            <p class="body-text"><strong>Parking:</strong> Free - multiple lots throughout park</p>
-                            <p class="body-text"><strong>Hours:</strong> 5:00 AM - 10:00 PM daily</p>
-                            <p class="body-text"><strong>Reservation:</strong> None required</p>
-                        </div>
-                        <div>
-                            <p class="body-text"><strong>Distance from Incline:</strong> ~14 minutes</p>
-                            <p class="body-text"><strong>Recommended parking:</strong> Northern parking lot for Central Garden access</p>
-                        </div>
-                    </div>
-                    <p class="body-text" style="margin-top: 15px;">
-                        <strong>Key Details:</strong> Free entry and parking. 1,367-acre park with towering red rock formations. Multiple trails from easy to moderate. Visitor Center open 9 AM - 5 PM. Central Garden Trail is paved and wheelchair accessible.
-                    </p>
-                    <p class="body-text" style="margin-top: 10px;">
-                        <strong>Shot List:</strong>
-                    </p>
-                    <ul class="checklist">
-                        <li>Walking through Central Garden path</li>
-                        <li>Reflective moments among rock formations</li>
-                        <li>Balanced Rock area for symbolic imagery</li>
-                        <li>Kissing Camels formation with Pikes Peak backdrop</li>
-                        <li>Don walking trails - medium and wide shots</li>
-                        <li>Contemplative close-ups</li>
-                        <li>Scenic overlooks with panoramic views</li>
-                        <li>Natural beauty shots for Script 2 transitions</li>
-                        <li>Family hiking past (if opportunity presents)</li>
-                        <li>Wind through trees/nature details</li>
-                    </ul>
+                <div class="note">
+                    <strong>END CARD / OVERLAY:</strong> Logo · URL · "Book your consultation"
                 </div>
-
-                <div class="location-card">
-                    <h3 class="heading_h3">Location 3: Don's Home</h3>
-                    <div class="two-column">
-                        <div>
-                            <p class="body-text"><strong>Primary Use:</strong> A-roll (direct-to-camera segments)</p>
-                            <p class="body-text"><strong>Secondary Use:</strong> Voiceover recording</p>
-                            <p class="body-text"><strong>Tertiary Use:</strong> Additional B-roll and prop scenes</p>
-                        </div>
-                        <div>
-                            <p class="body-text"><strong>Setup Requirements:</strong></p>
-                            <ul style="margin-left: 20px;">
-                                <li>Main interview area with clean background</li>
-                                <li>Lighting setup for consistent look</li>
-                                <li>Quiet space for voiceover recording</li>
-                                <li>Garage access for concrete bag scene</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="body-text" style="margin-top: 15px;">
-                        <strong>Shot List:</strong>
-                    </p>
-                    <ul class="checklist">
-                        <li>All Script 2 direct-to-camera segments</li>
-                        <li>All Script 3 direct-to-camera segments and explanations</li>
-                        <li>Garage scene: Don attempting to lift 50lb concrete bag</li>
-                        <li>Piggyback scene with friend (if not shot at Incline)</li>
-                        <li>Online research montage (scrolling weighted vest options)</li>
-                        <li>Weighted vest unboxing and plate loading</li>
-                        <li>Additional lifestyle B-roll as needed</li>
-                        <li>Detail shots: running shoes, personal items, etc.</li>
-                    </ul>
-                </div>
-
-                <div class="location-card">
-                    <h3 class="heading_h3">Alternate/Additional B-Roll Locations</h3>
-                    <p class="body-text">
-                        If time permits or weather requires alternate plans, these locations can provide additional B-roll footage:
-                    </p>
-                    <ul style="margin-left: 20px; margin-top: 10px;">
-                        <li><strong>Barr Trail:</strong> Accessible from Manitou Incline summit or separate trailhead - good for hiking footage</li>
-                        <li><strong>Local coffee shop:</strong> For "talking over coffee" scene in Script 2</li>
-                        <li><strong>Local park:</strong> Park bench at sunrise/sunset shots for Script 2</li>
-                        <li><strong>Store window reflections:</strong> Symbolic "starting again" imagery</li>
-                    </ul>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="section" id="equipment">
-                <h2 class="heading_h2">Equipment Note</h2>
-
-                <div class="info-card">
-                    <h3 class="heading_h3">Recommended: Microspikes for Manitou Incline</h3>
-                    <p class="body-text">
-                        December conditions on the Incline can include ice and packed snow, especially in shaded areas and near the top. Microspikes provide traction and safety for the climb. If you don't have a pair, they're available at most outdoor retailers in Colorado Springs.
-                    </p>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="section" id="scripts">
-                <h2 class="heading_h2">Complete Scripts</h2>
-
-                <div class="info-card">
-                    <h3 class="heading_h3">Script 1: The Weight We Carry</h3>
-                    <div style="margin-top: 10px;">
-                        <span class="tag is-accent-primary">PRIMARY OUTDOOR SHOOT</span>
-                        <span class="tag secondary">VOICEOVER REQUIRED</span>
-                    </div>
-                    <p class="body-text" style="margin-top: 15px;">
-                        <strong>Estimated Runtime:</strong> 60-90 seconds<br>
-                        <strong>Primary Message:</strong> The hardest part is taking the first step back to yourself
-                    </p>
-
-                    <div class="script-content">
-                        <p class="action">OPENING - ARCHIVAL</p>
-                        <p class="script-line">Photos of me at my heaviest. Waterskiing. Standing by a tractor-trailer. A mix of those everyday shots I gave you that show the size and strain. The final image lingers on my stomach after surgery, a long line of staples.</p>
-
-                        <div class="voiceover">
-                            <p class="script-line"><strong>Voice over:</strong> In 1998 I weighed more than four hundred pounds. Multiple weight loss surgeries nearly killed me, but I was determined to just get back to me.</p>
-                        </div>
-
-                        <p class="action">AT HOME - ONLINE</p>
-                        <p class="script-line">I scroll ridiculous ways to recreate the weight. Fat suits. Padded vests. Heavy packs. A small laugh. Head shake.</p>
-
-                        <p class="action">GARAGE - CONCRETE BAG</p>
-                        <p class="script-line">I try to lift a fifty pound bag of concrete from the garage. It barely moves.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>On camera:</strong> So two hundred pounds is four of these. That's not happening.</p>
-                        </div>
-
-                        <p class="action">BUDDY SEQUENCE</p>
-                        <p class="script-line">I hoist a friend for a piggyback up a few steps. His weight flashes on screen.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>On camera:</strong> Yeah. This is about right. <em>Grimace face mixed with laughter</em></p>
-                        </div>
-
-                        <p class="action">VEST ARRIVES</p>
-                        <p class="script-line">I unbox a weighted vest and load plates.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>On camera:</strong> The goal was two hundred. My back and knees disagree, so we'll call it a hundred. Still plenty to make the point.</p>
-                        </div>
-
-                        <p class="action">BASE OF THE MANITOU INCLINE</p>
-                        <p class="script-line">Drone pulls back to reveal the climb.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>On camera:</strong> This is the Manitou Incline in Colorado Springs. Two thousand seven hundred sixty eight stairs straight up. It's beautiful and it's brutal. Back when I was heavy, just crossing a parking lot felt like this.</p>
-                        </div>
-
-                        <p class="action">BEGIN CLIMB</p>
-                        <p class="script-line">Heavy breathing. Close shots of feet, hands, plates shifting.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>On camera, still breathing hard:</strong> Everyone says eat better, move more. Sure. But when every step feels like this, starting is the hardest part.</p>
-                        </div>
-
-                        <p class="script-line">I stop, drop to one knee, unclip the vest. It hits with a dull thud.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>On camera:</strong> That's why I founded Ascent Trim and Wellness. Because sometimes the hardest part of the climb is taking the first step back to you.</p>
-                        </div>
-
-                        <p class="script-line">I climb again without the vest. Drone tracks me to the summit or cuts to summit.</p>
-
-                        <div class="voiceover">
-                            <p class="script-line"><strong>Voice over:</strong> You do not have to carry this forever. Let's start getting it off for good, so you can just get back to you.</p>
-                        </div>
-
-                        <div class="note">
-                            <strong>End card:</strong> Ascent Trim and Wellness — Just feel like you again.
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="section-divider">
-
-                <div class="info-card">
-                    <h3 class="heading_h3">Script 2: Why I Built This Clinic</h3>
-                    <div style="margin-top: 10px;">
-                        <span class="tag is-accent-primary">A-ROLL + B-ROLL</span>
-                    </div>
-                    <p class="body-text" style="margin-top: 15px;">
-                        <strong>Estimated Runtime:</strong> 60-75 seconds<br>
-                        <strong>Primary Message:</strong> Building trust through vulnerability and authentic motivation
-                    </p>
-
-                    <div class="script-content">
-                        <p class="action">OPENING — CLOSE SHOT, DIRECT TO CAMERA</p>
-
-                        <div class="dialogue">
-                            <p class="script-line">I didn't build this clinic to make money. I built it because I know exactly what it feels like to wake up and not recognize yourself. To feel tired before the day even starts. To try again and again and never feel like you're winning.</p>
-                        </div>
-
-                        <p class="action">CUT TO — ARCHIVAL PHOTOS OR PERSONAL FOOTAGE</p>
-                        <p class="script-line">Photos of me at my heaviest. Photos that tell the truth. Diet programs, gym memberships, promises that never lasted.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>ON CAMERA:</strong> I tried everything. Fad diets, starvation, surgeries that almost took my life. Every time I lost a little weight, I lost a little more of myself.</p>
-                        </div>
-
-                        <p class="action">B-ROLL — REAL WORLD STAND INS (NO CLINIC)</p>
-                        <p class="script-line">Shots of a park bench at sunrise. A pair of running shoes on a trail. A reflection in a store window. Moments that show what it means to start again.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>ON CAMERA:</strong> The truth is, people don't need more motivation. They need a way to start that actually works. And for the first time in my life, medicine can help people do that safely.</p>
-                        </div>
-
-                        <p class="action">B-ROLL — SYMBOLIC FOOTAGE</p>
-                        <p class="script-line">Walking through Garden of the Gods. Talking with someone over coffee. Watching a family hike past on the trail. Natural, everyday scenes that show connection and hope.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>ON CAMERA:</strong> That's why I built Ascent Trim and Wellness. Because I wish something like this existed when I needed it most. And now it does.</p>
-                        </div>
-
-                        <p class="action">B-ROLL — DRONE SHOT OR TRAIL OVERLOOK</p>
-                        <p class="script-line">Wind moving through the trees. Quiet. Reflective. Hopeful.</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>ON CAMERA:</strong> If you're ready to start again, we'll do it together. Because the hardest climb isn't up the mountain. It's back to yourself.</p>
-                        </div>
-
-                        <div class="note">
-                            <strong>END CARD:</strong> Ascent Trim and Wellness logo — Just feel like you again.
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="section-divider">
-
-                <div class="info-card">
-                    <h3 class="heading_h3">Script 3: How It Works</h3>
-                    <div style="margin-top: 10px;">
-                        <span class="tag is-accent-primary">EDUCATIONAL</span>
-                        <span class="tag secondary">VOICEOVER REQUIRED</span>
-                    </div>
-                    <p class="body-text" style="margin-top: 15px;">
-                        <strong>Estimated Runtime:</strong> 60-75 seconds<br>
-                        <strong>Primary Message:</strong> Educating on the science behind modern weight loss treatments
-                    </p>
-
-                    <div class="script-content">
-                        <p class="action">OPEN – A-ROLL (Don, direct to camera)</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>DON:</strong> "Most weight-loss advice treats hunger like it's optional. 'Just eat less.' 'Just move more.' 'Just have more discipline.' You've heard it all."</p>
-                        </div>
-
-                        <p class="action">CUTAWAY – SIMPLE B-ROLL / GRAPHIC (humans eating, subtle brain/gut graphic)</p>
-
-                        <div class="voiceover">
-                            <p class="script-line"><strong>DON (V.O.):</strong> "But hunger isn't a character flaw. It's a chemical signal. And for a lot of people, that signal is misfiring."</p>
-                        </div>
-
-                        <div class="note">
-                            <strong>GRAPHIC:</strong> FOOD → GUT → HORMONE → BRAIN
-                        </div>
-
-                        <div class="voiceover">
-                            <p class="script-line"><strong>DON (V.O.):</strong> "When everything's working right, your gut releases a hormone called GLP-1. It tells your brain: 'We've eaten. You can stop now.'</p>
-                            <p class="script-line">The problem? GLP-1 has a half-life of about two minutes. For many people, that signal fades before it ever reaches the brain."</p>
-                        </div>
-
-                        <div class="note">
-                            <strong>ANIMATION:</strong> GLP-1 SIGNAL FADING BEFORE RECEPTOR
-                        </div>
-
-                        <div class="voiceover">
-                            <p class="script-line"><strong>DON (V.O.):</strong> "So you're not overeating because you lack willpower. Your brain simply isn't getting the 'I'm full' message."</p>
-                        </div>
-
-                        <p class="action">BACK TO A-ROLL – Don</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>DON:</strong> "Modern medical weight-loss works by activating the same receptor GLP-1 is supposed to hit… and keeping that signal active long enough for your brain to register fullness."</p>
-                        </div>
-
-                        <div class="note">
-                            <strong>SPLIT VISUAL:</strong> "OLD MODEL" VS "NEW MODEL"
-                        </div>
-
-                        <div class="voiceover">
-                            <p class="script-line"><strong>DON (V.O.):</strong> "It's not about shrinking your stomach. It's not about forcing restriction.</p>
-                            <p class="script-line">It's about correcting the chemical messaging that drives appetite."</p>
-                        </div>
-
-                        <p class="action">FINAL A-ROLL – Don, steady and clear</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>DON:</strong> "When that signal finally reaches the brain the way it should, your hunger quiets. Your metabolism steadies. And eating starts to feel… normal again."</p>
-                        </div>
-
-                        <p class="action">CTA – A-ROLL + OVERLAY</p>
-
-                        <div class="dialogue">
-                            <p class="script-line"><strong>DON:</strong> "If you're ready for weight loss that makes sense — and finally feels sustainable — book your free consultation with Ascent Trim & Wellness."</p>
-                        </div>
-
-                        <div class="note">
-                            <strong>END CARD / OVERLAY:</strong> Logo · URL · "Book your consultation"
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     </div>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 768) {
-                        document.getElementById('navLinks').classList.remove('active');
-                    }
-                }
-            });
-        });
-
-        // Mobile navigation toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768 && 
-                !hamburger.contains(e.target) && 
-                !navLinks.contains(e.target)) {
-                navLinks.classList.remove('active');
-            }
-        });
-    </script>
 </body>
 </html>
