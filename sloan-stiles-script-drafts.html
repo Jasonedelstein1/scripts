@@ -3,281 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sloan Stiles Hair Extensions - Production Dossier</title>
+    <title>Sloan Stiles: Production Dossier</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-        
+
         :root {
             --primary-bg: #f8f3de;
             --secondary-bg: #0a0a0d;
             --primary: #1a6aff;
             --secondary: #fc5130;
-            --shadow-light: rgba(10, 10, 13, 0.1);
-            --shadow-medium: rgba(10, 10, 13, 0.2);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background-color: var(--primary-bg);
             color: var(--secondary-bg);
             line-height: 1.6;
-            padding: 20px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
-        
+
         .heading_h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 1000;
             color: var(--primary);
-            font-size: 2.5rem;
             line-height: 1;
             margin-bottom: 20px;
         }
-        
+
         .heading_h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
             font-weight: 800;
             color: var(--primary);
-            font-size: 2rem;
-            line-height: 1.2;
-            margin: 40px 0 20px 0;
-        }
-        
-        .heading_h3 {
-            font-weight: 800;
-            color: var(--secondary);
-            font-size: 1.5rem;
-            margin: 30px 0 15px 0;
-        }
-        
-        .heading_h4 {
-            font-weight: 800;
-            color: var(--secondary);
-            font-size: 1.25rem;
-            margin: 25px 0 12px 0;
-        }
-        
-        .body-text {
-            font-weight: 400;
-            font-size: 1rem;
+            margin-top: 40px;
             margin-bottom: 15px;
         }
-        
-        .highlight {
+
+        .heading_h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 800;
             color: var(--secondary);
-            font-weight: 700;
+            margin-top: 25px;
+            margin-bottom: 12px;
         }
-        
-        .script-card {
+
+        .body-text {
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .info-card {
             background: var(--primary-bg);
             border: 1px solid rgba(10, 10, 13, 0.15);
             border-radius: 6px;
-            box-shadow: 0 2px 8px var(--shadow-light);
             padding: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .meta-info {
-            background: rgba(10, 10, 13, 0.03);
-            border-left: 4px solid var(--primary);
-            padding: 15px;
             margin-bottom: 20px;
         }
-        
-        .meta-info p {
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .meta-info strong {
-            font-weight: 700;
-            color: var(--secondary-bg);
-        }
-        
-        .script-content {
-            background: rgba(10, 10, 13, 0.02);
-            border: 1px solid rgba(10, 10, 13, 0.1);
-            border-radius: 6px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        
-        .script-line {
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-        
-        .section-divider {
-            border: none;
-            height: 1px;
-            background: linear-gradient(135deg, rgba(10, 10, 13, 0.1), rgba(10, 10, 13, 0.05));
-            margin: 40px 0;
-        }
-        
+
         ul {
             margin-left: 20px;
+            margin-top: 10px;
             margin-bottom: 15px;
         }
-        
+
         li {
-            margin-bottom: 10px;
-            font-weight: 400;
+            margin-bottom: 8px;
         }
-        
-        .tag {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--primary-bg);
-            border: 2px solid var(--primary);
-            border-radius: 6px;
-            padding: 6px 12px;
+
+        strong {
             font-weight: 700;
-            font-size: 0.85rem;
-            margin-right: 10px;
-            margin-bottom: 10px;
         }
-        
-        .tag.secondary {
-            background-color: var(--secondary);
-            border-color: var(--secondary);
+
+        .script-content {
+            margin-top: 20px;
         }
-        
-        .question-list {
-            background: rgba(26, 106, 255, 0.05);
-            border-left: 4px solid var(--primary);
-            padding: 15px 20px;
-            margin: 20px 0;
-        }
-        
-        .question-list li {
-            color: var(--secondary-bg);
-            font-weight: 500;
-        }
-        
-        @media print {
-            body {
-                background: white;
-                color: black;
-            }
-            
-            .script-card {
-                page-break-inside: avoid;
-                border: 1px solid #ccc;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .heading_h1 {
-                font-size: 2rem;
-            }
-            
-            .heading_h2 {
-                font-size: 1.5rem;
-            }
-            
-            .heading_h3 {
-                font-size: 1.25rem;
-            }
-            
-            body {
-                padding: 15px;
-            }
-            
-            .script-card {
-                padding: 20px;
-            }
+
+        .dialogue {
+            margin-left: 20px;
+            margin-bottom: 12px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="heading_h1">Sloan Stiles Hair Extensions</h1>
-        <h2 class="heading_h2" style="color: var(--secondary); margin-top: 5px;">Video Production Scripts</h2>
+        <h1 class="heading_h1">Sloan Stiles</h1>
+        <p class="body-text">Production Dossier</p>
         
-        <p class="body-text">This document contains three video scripts designed to educate potential clients about hair extensions, build trust through testimonials, and qualify leads through authentic messaging about Sloan's health-first approach.</p>
-        
-        <hr class="section-divider">
-        
-        <!-- Script 1 -->
-        <div class="script-card">
-            <div class="tag">Educational</div>
-            <div class="tag secondary">Primary CTA</div>
-            
-            <h3 class="heading_h3">Script 1: "3 Things You Need to Know About Hair Extensions"</h3>
-            
-            <div class="meta-info">
-                <p><strong>Duration:</strong> 60 seconds</p>
-                <p><strong>Type:</strong> Direct-to-camera educational content</p>
-                <p><strong>Talent:</strong> Sloan Stiles</p>
-                <p><strong>Primary CTA:</strong> Book complimentary consultation</p>
-                <p><strong>Tone:</strong> Professional, educational, trustworthy</p>
-                <p><strong>Location:</strong> Salon or clean, professional backdrop</p>
-            </div>
-            
+        <div class="info-card">
+            <p class="body-text"><strong>Shoot Date:</strong> Thursday, February 20, 2025</p>
+            <p class="body-text"><strong>Time:</strong> 11:30 AM</p>
+            <p class="body-text"><strong>Location:</strong> 2267 Glenarm Place, Denver</p>
+            <p class="body-text"><strong>Producer:</strong> Jason Edelstein, The Salt Lick Denver</p>
+        </div>
+
+        <h2 class="heading_h2">Schedule</h2>
+
+        <div class="info-card">
+            <h3 class="heading_h3">B-Roll: Working on Client's Hair</h3>
+            <p class="body-text">
+                Film Sloan working on a client's hair extensions.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Script 2: Client Testimonial</h3>
+            <p class="body-text">
+                Film testimonial interview with the client.
+            </p>
+        </div>
+
+        <h2 class="heading_h2">Scripts</h2>
+
+        <div class="info-card">
+            <h3 class="heading_h3">Script 1</h3>
+
             <div class="script-content">
-                <div class="script-line">
-                    If you're looking for hair extensions in Denver, here are the 3 things you need to know.
-                </div>
-                
-                <div class="script-line">
-                    <strong>#1: Hair extensions require maintenance.</strong> Just like your real hair, hair extensions need care at home and at the salon.
-                </div>
-                
-                <div class="script-line">
-                    <strong>#2: Hair extensions can damage your real hair when done improperly.</strong> There are so many unlicensed hair stylists who install hair extensions. If you want hair extensions because you want thicker & fuller hair, it is so important to prioritize your hair health.
-                </div>
-                
-                <div class="script-line">
-                    <strong>#3: When they're not installed right, hair extensions can be obvious.</strong>
-                </div>
-                
-                <div class="script-line">
-                    My name is Sloan Stiles, and when I install hair extensions, I put my client's hair health above everything else.
-                </div>
-                
-                <div class="script-line">
-                    Extensions can be incredibly safe when done properly. I have my cosmetology license and certifications in 5 different hair extension techniques, and over 18 years of experience color-matching, installing, and maintaining hair extensions.
-                </div>
-                
-                <div class="script-line">
-                    Hair extensions can be a big investment, so it's so important to make sure they're installed correctly the first time.
-                </div>
-                
-                <div class="script-line">
-                    Click "Book Now," to schedule a complimentary consultation. We'll talk about your hair health, at home maintenance, and cost so we can figure out if hair extensions are right for you.
-                </div>
+                <p class="body-text">
+                    If you're looking to get hair extensions done in Denver, here are 3 helpful things to consider
+                </p>
+
+                <p class="body-text">
+                    #1 They require maintenance just like your natural hair, but probably not as much as you think, typically an average of an hour and half in the salon every 6 weeks
+                </p>
+
+                <p class="body-text">
+                    #2 They can damage your natural hair if done improperly, this is why I've been certified by 5 different companies in different installation methods to learn as much as possible about how and why to install in very specific ways that prioritize the health of your hair above all
+                </p>
+
+                <p class="body-text">
+                    #3 Similarly to affecting the health of your natural hair, if done improperly they can also look obvious, one of my favorite things is when my clients come back and say "I've been getting compliments but no one seems to know I have extensions in!" They almost want people to know, but for me this is a huge compliment, that they are undetectable and natural looking is the goal
+                </p>
+
+                <p class="body-text">
+                    My name is Sloan and I'd love to assist you on this journey if you've been considering getting extensions, lets make sure they're the right fit for both your budget and lifestyle, there should be a book now button below to get started by booking a complimentary consultation.
+                </p>
             </div>
         </div>
-        
-        <hr class="section-divider">
-        
-        <!-- Script 2 -->
-        <div class="script-card">
-            <div class="tag">Testimonial</div>
-            <div class="tag secondary">Social Proof</div>
-            
+
+        <div class="info-card">
             <h3 class="heading_h3">Script 2: Client Testimonial - "Wedding Extensions Story"</h3>
-            
-            <div class="meta-info">
-                <p><strong>Duration:</strong> 45-60 seconds</p>
-                <p><strong>Type:</strong> Client interview/testimonial</p>
-                <p><strong>Talent:</strong> Satisfied client (wedding extensions)</p>
-                <p><strong>Primary CTA:</strong> Book consultation</p>
-                <p><strong>Tone:</strong> Authentic, conversational, relatable</p>
-                <p><strong>Location:</strong> Salon or client's preferred setting</p>
-            </div>
-            
-            <h4 class="heading_h4">Interview Questions for Client</h4>
-            
-            <div class="question-list">
+
+            <p class="body-text">
+                <strong>Duration:</strong> 45-60 seconds<br>
+                <strong>Type:</strong> Client interview/testimonial<br>
+                <strong>Talent:</strong> Satisfied client (wedding extensions)<br>
+                <strong>Primary CTA:</strong> Book consultation<br>
+                <strong>Tone:</strong> Authentic, conversational, relatable<br>
+                <strong>Location:</strong> Salon or client's preferred setting
+            </p>
+
+            <div class="script-content">
+                <h3 class="heading_h3">Interview Questions for Client</h3>
                 <ul>
                     <li>Why did you decide to get hair extensions?</li>
                     <li>What made you want to keep them for longer?</li>
@@ -287,82 +175,50 @@
                     <li>In what ways do you feel Sloan prioritized your hair health?</li>
                     <li>Would you recommend Sloan to someone in Denver looking for hair extensions?</li>
                 </ul>
-            </div>
-            
-            <h4 class="heading_h4">Scripted Testimonial (Based on Client Responses)</h4>
-            
-            <div class="script-content">
-                <div class="script-line">
-                    I got hair extensions for my wedding, and now I wear them all the time.
-                </div>
-                
-                <div class="script-line">
-                    I planned to just keep them in for the honeymoon, but when we got back I just didn't want to take them out!
-                </div>
-                
-                <div class="script-line">
-                    Sloan did an amazing job with the installation, and it actually only took an hour.
-                </div>
-                
-                <div class="script-line">
-                    But I think what really made me feel comfortable about working with her was her focus on my existing hair health, and making sure I could keep up with the maintenance. Even though I thought I was just going to have the extensions in for a couple of weeks, I could tell that she had my long-term hair health in mind every step of the way.
-                </div>
-                
-                <div class="script-line">
-                    If you're looking for hair extensions in the Denver area, I highly recommend booking a consultation with Sloan.
-                </div>
-            </div>
-        </div>
-        
-        <hr class="section-divider">
-        
-        <!-- Script 3 -->
-        <div class="script-card">
-            <div class="tag">Qualification</div>
-            <div class="tag secondary">Trust Building</div>
-            
-            <h3 class="heading_h3">Script 3: Qualification Message - "Not For Everybody"</h3>
-            
-            <div class="meta-info">
-                <p><strong>Duration:</strong> 60 seconds</p>
-                <p><strong>Type:</strong> Direct-to-camera educational/qualification</p>
-                <p><strong>Talent:</strong> Sloan Stiles</p>
-                <p><strong>Primary CTA:</strong> Book free consultation</p>
-                <p><strong>Tone:</strong> Honest, professional, health-focused</p>
-                <p><strong>Location:</strong> Salon</p>
-            </div>
-            
-            <div class="script-content">
-                <div class="script-line">
-                    If you want thicker, fuller hair that blends in seamlessly with your existing hair, hair extensions might be for you, but they're not for everybody.
-                </div>
-                
-                <div class="script-line">
-                    There are too many unlicensed and unqualified stylists that will install hair extensions on anyone who walks through their door.
-                </div>
-                
-                <div class="script-line">
-                    That's not me.
-                </div>
-                
-                <div class="script-line">
-                    When you install hair extensions, you are putting weight on your existing hair follicles. When done properly, this weight can be balanced and can even lead to hair health benefits by reducing the impact of heat and products on your real hair, but when done improperly they can pull at those follicles and lead to more hair loss, which is the opposite of what you want when you're looking for hair extensions.
-                </div>
-                
-                <div class="script-line">
-                    That's why I focus my hair extension consultations on existing hair health.
-                </div>
-                
-                <div class="script-line">
-                    Everyone's hair is different, and there is no one-size-fits-all solution when it comes to hair extensions.
-                </div>
-                
-                <div class="script-line">
-                    Let's find out if hair extensions are right for you. Click "Book Now" to schedule a free consultation today.
+
+                <h3 class="heading_h3">Scripted Testimonial (Based on Client Responses)</h3>
+
+                <div class="dialogue">
+                    <p class="body-text">
+                        I got hair extensions for my wedding, and now I wear them all the time.
+                    </p>
+
+                    <p class="body-text">
+                        I planned to just keep them in for the honeymoon, but when we got back I just didn't want to take them out!
+                    </p>
+
+                    <p class="body-text">
+                        Sloan did an amazing job with the installation, and it actually only took an hour.
+                    </p>
+
+                    <p class="body-text">
+                        But I think what really made me feel comfortable about working with her was her focus on my existing hair health, and making sure I could keep up with the maintenance. Even though I thought I was just going to have the extensions in for a couple of weeks, I could tell that she had my long-term hair health in mind every step of the way.
+                    </p>
+
+                    <p class="body-text">
+                        If you're looking for hair extensions in the Denver area, I highly recommend booking a consultation with Sloan.
+                    </p>
                 </div>
             </div>
         </div>
-        
+
+        <div class="info-card">
+            <h3 class="heading_h3">Script 3</h3>
+
+            <div class="script-content">
+                <p class="body-text">
+                    If you want thicker, fuller hair with more volume, texture, and length hand tied hair extensions are likely the perfect solution.
+                </p>
+
+                <p class="body-text">
+                    That being said they're not for everyone, they do require some maintenance and can be done improperly leading to damage or clearly visible wefts, which is why my top priorities when selecting a method, type of hair and placement, is the health of your natural hair, and blend of colors to make them as safe, natural and undetectable as possible.
+                </p>
+
+                <p class="body-text">
+                    Everyone's hair is different so extensions are never one size fits all, if you're interested in finding out what might work best for you, click the "book now" button to schedule a complimentary consultation today!
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
